@@ -1,8 +1,12 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
+import CaseStudyCard from '../components/CaseStudyCard';
+import projects from '../data/projects';
 import './HomePage.css';
 
 export default function HomePage() {
+  const featuredProjects = projects.filter(p => p.featured);
+
   return (
     <div className="home-page">
       <HeroSection />
@@ -29,7 +33,9 @@ export default function HomePage() {
           <p className="section-subtitle">Recent delivery across infrastructure and residential development.</p>
           
           <div className="projects-grid">
-            <div className="placeholder">Projects grid coming soon...</div>
+            {featuredProjects.map(project => (
+              <CaseStudyCard key={project.id} project={project} />
+            ))}
           </div>
         </div>
       </section>

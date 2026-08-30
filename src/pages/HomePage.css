@@ -80,14 +80,6 @@
   margin-top: 40px;
 }
 
-.placeholder {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #e0e0e0;
-  color: #666;
-}
-
 .credentials {
   padding: 60px 20px;
   background-color: #ffffff;
