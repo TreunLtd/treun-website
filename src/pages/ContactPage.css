@@ -74,6 +74,17 @@
   font-weight: bold;
 }
 
+.contact-detail a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-detail a:hover {
+  color: #666;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;

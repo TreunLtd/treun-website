@@ -32,7 +32,8 @@
 
 .footer-section a {
   color: #cccccc;
-  text-decoration: none;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .footer-section a:hover {

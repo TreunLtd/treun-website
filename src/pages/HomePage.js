@@ -15,6 +15,7 @@ export default function HomePage() {
         <div className="column left-column">
           <h2>Treun Project Management</h2>
           <p>Project management, design coordination, and procurement for civil infrastructure and commercial projects.</p>
+          <p>We engage early with feasibility studies and preliminary options analysis—including bulk and location modelling—before you commit to designers or architects. Our role is to establish viability and guide the path forward.</p>
           <p>We partner with Tier 1 contractors, developers, and government agencies to deliver complex projects on time and within budget.</p>
           <a href="/project-management" className="read-more">Learn More →</a>
         </div>
@@ -22,7 +23,7 @@ export default function HomePage() {
         <div className="column right-column">
           <h2>Treun Works</h2>
           <p>Construction and civil works delivery. Delivering Complex Projects.</p>
-          <p>From subdivisions to infrastructure, we manage complex projects with precision and accountability.</p>
+          <p>From small residential subdivisions and house builds for owner-clients to complex civil infrastructure. We specialize in understanding the owner's perspective and delivering quality outcomes, whether you're managing your own project or need full delivery.</p>
           <a href="/works" className="read-more">Learn More →</a>
         </div>
       </section>

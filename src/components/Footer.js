@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Contact</h4>
           <p>Algies Bay, Warkworth<br />Auckland, New Zealand</p>
-          <p>Phone: +64 27 6464 624<br />Email: matt@treun.co.nz</p>
+          <p>Phone: +64 27 6464 624<br />Email: <a href="mailto:matt@treun.co.nz?subject=Treun Project Enquiry">matt@treun.co.nz</a></p>
         </div>
       </div>
 

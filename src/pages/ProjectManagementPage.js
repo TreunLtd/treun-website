@@ -16,7 +16,7 @@ export default function ProjectManagementPage() {
       <section className="pm-about">
         <div className="section-container">
           <h2>Our Approach</h2>
-          <p>We partner with Tier 1 contractors, developers, and government agencies to deliver complex projects on time and within budget. Our expertise spans feasibility studies, design coordination, procurement management, and full project delivery oversight.</p>
+          <p>We partner with Tier 1 contractors, developers, and government agencies to deliver complex projects on time and within budget. Our expertise spans feasibility studies, preliminary options analysis, design coordination, procurement management, and full project delivery oversight. We engage early to test project viability before significant investment.</p>
         </div>
       </section>
 
@@ -24,6 +24,10 @@ export default function ProjectManagementPage() {
         <div className="section-container">
           <h2>Services</h2>
           <div className="services-grid">
+            <div className="service-box">
+              <h3>Feasibility & Options Analysis</h3>
+              <p>Preliminary bulk and location modelling, site assessment, and options analysis before engaging architects or designers. Establish project viability early.</p>
+            </div>
             <div className="service-box">
               <h3>Project Management</h3>
               <p>Full project management from feasibility through handover, including schedule and budget control, risk management, and stakeholder coordination.</p>

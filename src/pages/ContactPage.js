@@ -42,13 +42,19 @@ export default function ContactPage() {
               <div className="info-block">
                 <h3>Treun Project Management</h3>
                 <p>Project management and design coordination for civil infrastructure and commercial projects.</p>
-                <p className="contact-detail">Phone: +64 27 6464 624<br />Email: matt@treun.co.nz</p>
+                <p className="contact-detail">
+                  Phone: +64 27 6464 624<br />
+                  Email: <a href="mailto:matt@treun.co.nz?subject=Project Enquiry - Treun Project Management">matt@treun.co.nz</a>
+                </p>
               </div>
 
               <div className="info-block">
                 <h3>Treun Works</h3>
                 <p>Construction and civil works delivery.</p>
-                <p className="contact-detail">Phone: +64 27 6464 624<br />Email: matt@treun.co.nz</p>
+                <p className="contact-detail">
+                  Phone: +64 27 6464 624<br />
+                  Email: <a href="mailto:matt@treun.co.nz?subject=Project Enquiry - Treun Works">matt@treun.co.nz</a>
+                </p>
               </div>
 
               <div className="info-block">
