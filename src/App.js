@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
       <Navigation />
       <main>
         <h1>Treun Website (Building...)</h1>
-        <p>Dev server is running. Navigation component is live.</p>
+        <p>Dev server is running. Navigation and Footer components are live.</p>
       </main>
+      <Footer />
     </div>
   );
 }
