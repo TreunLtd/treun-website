@@ -1,0 +1,155 @@
+.pm-page {
+  flex: 1;
+}
+
+.pm-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.pm-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pm-hero-content h1 {
+  font-family: 'Georgia', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.pm-hero-content p {
+  font-size: 18px;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.pm-about {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pm-about h2,
+.pm-services h2,
+.pm-projects h2,
+.pm-cta h2 {
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  font-weight: normal;
+}
+
+.pm-about p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pm-services {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  font-weight: normal;
+}
+
+.service-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.pm-projects {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pm-cta {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.pm-cta h2 {
+  margin-bottom: 15px;
+}
+
+.pm-cta p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 768px) {
+  .pm-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
