@@ -30,7 +30,7 @@ export default function HomePage() {
 
       <section className="featured-projects">
         <div className="section-container">
-          <h2>Featured Projects TESTING 123</h2>
+          <h2>Featured Projects</h2>
           <p className="section-subtitle">Recent delivery across infrastructure and residential development.</p>
           
           <div className="projects-grid">
