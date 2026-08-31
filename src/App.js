@@ -1,4 +1,3 @@
-import AllProjectsPage from './pages/AllProjectsPage';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
@@ -8,6 +7,7 @@ import ProjectManagementPage from './pages/ProjectManagementPage';
 import WorksPage from './pages/WorksPage';
 import ContactPage from './pages/ContactPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import AllProjectsPage from './pages/AllProjectsPage';
 import './App.css';
 
 function App() {

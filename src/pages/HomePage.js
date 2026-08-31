@@ -34,14 +34,14 @@ export default function HomePage() {
           <p className="section-subtitle">Recent delivery across infrastructure and residential development.</p>
           
           <div className="projects-grid">
-  {featuredProjects.map(project => (
-    <CaseStudyCard key={project.id} project={project} />
-  ))}
-</div>
+            {featuredProjects.map(project => (
+              <CaseStudyCard key={project.id} project={project} />
+            ))}
+          </div>
 
-<div className="view-all-projects">
-  <a href="/all-projects" className="view-all-button">View All Projects →</a>
-</div>
+          <div className="view-all-projects">
+            <a href="/all-projects" className="view-all-button">View All Projects →</a>
+          </div>
         </div>
       </section>
 
