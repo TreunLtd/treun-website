@@ -37,9 +37,9 @@ export default function ProjectDetailPage() {
                 {project.images.map((image, index) => (
                   <div key={index} className="gallery-item">
                     <img 
-                      src={`/images/projects/${project.folder}/${image}`}
-                      alt={`${project.name} - Image ${index + 1}`}
-                    />
+  src={`/images/projects/${project.folder}/${image}`}
+  alt={`${project.name}`}
+/>
                   </div>
                 ))}
               </div>
