@@ -13,7 +13,7 @@ export const projects = [
     approach: 'Treun integrated design leadership with meticulous procurement and adaptive project management. Custom cabinetry and architectural detailing designed in-house. Ground conditions engineered for steep terrain.',
     outcome: 'Four completed premium waterfront residences successfully delivered and retained as investment properties generating strong rental income.',
     featured: true,
-    images: ['will_01.jpg', 'will_02.jpg', 'will_03.jpg', 'will_04.jpg', 'will_05.jpg', 'will_06.jpg']
+    images: ['WILL_01.jpg', 'WILL_02.jpg', 'WILL_03.jpg', 'WILL_04.jpg', 'WILL_05.jpg', 'WILL_06.jpg', 'WILL_07.jpg', 'WILL_08.jpg', 'WILL_09.jpg']
   },
   {
     id: 'thet',
@@ -29,7 +29,7 @@ export const projects = [
     approach: 'Ground conditions managed through geotechnical investigation and driven pile installation. Construction sequenced to allow client occupation during early phases. Premium detailing coordinated with specialist trades.',
     outcome: 'Completed on time and within budget. Sophisticated waterfront residence delivered to premium specifications.',
     featured: true,
-    images: ['thet_01.jpg', 'thet_02.jpg', 'thet_03.jpg', 'thet_04.jpg', 'thet_05.jpg', 'thet_06.jpg']
+    images: ['THET_01.jpg', 'THET_02.jpg', 'THET_03.jpg', 'THET_04.jpg', 'THET_05.jpg', 'THET_06.jpg', 'THET_07.jpg', 'THET_08.jpg', 'THET_09.jpg', 'THET_10.jpg']
   },
   {
     id: 'mano',
@@ -45,12 +45,12 @@ export const projects = [
     approach: 'As main contractor and PM, Treun led drainage feasibility studies and council engagement. Funding staged carefully. Stormwater rerouting coordinated with engineers.',
     outcome: 'Successfully completed, on time and under budget.',
     featured: true,
-    images: ['mano_01.jpg', 'mano_02.jpg', 'mano_03.jpg', 'mano_04.jpg', 'mano_05.jpg', 'mano_06.jpg']
+    images: ['MANO_01.jpg', 'MANO_02.jpg', 'MANO_03.jpg', 'MANO_04.jpg', 'MANO_05.jpg', 'MANO_06.jpg', 'MANO_07.jpg', 'MANO_08.jpg']
   },
   {
     id: 'sea2',
     name: 'Seaview Terrace, Mt Albert',
-    folder: 'SEA2',
+    folder: 'SEAV',
     value: '$6.0M',
     type: '6-Lot Urban Infill Subdivision',
     location: 'Mt Albert, Auckland',
@@ -61,7 +61,7 @@ export const projects = [
     approach: 'Complex coordination of design, council approvals, and site remediation. Contractor relations managed despite challenges. Contaminated soil handled according to regulations.',
     outcome: 'Successfully completed, on time and under budget. Compact urban infill project demonstrating capability with contamination and difficult relationships.',
     featured: true,
-    images: ['sea2_01.jpg', 'sea2_02.jpg', 'sea2_03.jpg', 'sea2_04.jpg', 'sea2_05.jpg', 'sea2_06.jpg']
+    images: ['SEAV_01.jpg', 'SEAV_02.jpg', 'SEAV_03.jpg', 'SEAV_04.jpg', 'SEAV_05.jpg', 'SEAV_06.jpg']
   },
   {
     id: 'west',
@@ -77,7 +77,55 @@ export const projects = [
     approach: 'Coordinated off-grid system design with electrical engineer. Managed SIPs construction and foundation design with in-slab heating. Remote site logistics carefully managed.',
     outcome: 'Successfully completed. Demonstrated capability in specialized off-grid systems and remote site delivery.',
     featured: true,
-    images: ['west_01.jpg', 'west_02.jpg', 'west_03.jpg', 'west_04.jpg', 'west_05.jpg', 'west_06.jpg']
+    images: ['WEST_01.jpg', 'WEST_02.jpg', 'WEST_03.jpg', 'WEST_04.jpg', 'WEST_05.jpg', 'WEST_06.jpg']
+  },
+  {
+    id: 'pasa',
+    name: 'Pasadena Ave, Point Chevalier',
+    folder: 'PASA',
+    value: '$2.5M',
+    type: '2-Lot Subdivision & Complex Build',
+    location: 'Point Chevalier, Auckland',
+    timeline: '2 years',
+    client: 'Treun Limited (Owner-Developer)',
+    description: '2-lot subdivision with complex new build on tight, constrained urban site, plus renovation of existing dwelling.',
+    challenge: 'Tight site with significant earthworks, large structural cut, complex house design with open spans and large floor plates requiring innovative structural solutions.',
+    approach: 'As owner, developer, designer, and project manager, Treun led every phase from feasibility through delivery. Structural engineering coordinated for large spans and open-plan living. Site logistics managed carefully to maximize constrained space.',
+    outcome: 'Successfully completed. Very profitable project demonstrating integrated design and delivery capability on owner-controlled development.',
+    featured: true,
+    images: ['PASA_01.jpg', 'PASA_02.jpg', 'PASA_03.jpg', 'PASA_04.jpg', 'PASA_05.jpg', 'PASA_06.jpg', 'PASA_07.jpg', 'PASA_08.jpg', 'PASA_09.jpg']
+  },
+  {
+    id: 'poin',
+    name: 'Point View Drive, East Tamaki',
+    folder: 'POIN',
+    value: '$2.0M',
+    type: 'Complex Earthworks & Retaining',
+    location: 'East Tamaki, Auckland',
+    timeline: '1 year',
+    client: 'Josh',
+    description: 'Complex earthworks project with significant retaining structures and driveway construction on challenging terrain.',
+    challenge: 'Significant earthworks with extensive retaining wall structures required. Complex geotechnical conditions with site limitations requiring careful engineering and execution.',
+    approach: 'Comprehensive geotechnical assessment and structural engineering coordination. Retaining design optimized for site constraints. Careful sequencing of earthworks and construction to manage ground conditions and safety protocols.',
+    outcome: 'Successfully completed. Demonstrated expertise in complex earthworks and specialized retaining solutions.',
+    featured: true,
+    images: ['POIN_01.jpg', 'POIN_02.jpg', 'POIN_03.jpg', 'POIN_04.jpg', 'POIN_05.jpg', 'POIN_06.jpg']
+  },
+  {
+    id: 'walk',
+    name: 'Walker Rd, Point Chevalier',
+    folder: 'WALK',
+    value: '$4.5M',
+    type: '4-Lot Subdivision & Terraced Build',
+    location: 'Point Chevalier, Auckland',
+    timeline: '2 years',
+    client: 'Amanda and Richard',
+    description: '4-lot subdivision with 3 new terraced townhouses on remediated swamp and refuse site with driven piles and complex drainage.',
+    challenge: 'Soft ground over old swamp and refuse site requiring driven piles. Overland flow path management. Rerouting public stormwater drainage. Xlam subfloor construction.',
+    approach: 'Detailed geotechnical investigation and driven pile foundation design. Stormwater system rerouting coordinated with council and engineers. Client-side PM oversight ensuring quality delivery and regulatory compliance throughout.',
+    outcome: 'Successfully completed. Demonstrated capability in remediated site development and complex ground condition management.',
+    featured: true,
+    images: ['WALK_01.jpg', 'WALK_02.jpg', 'WALK_03.jpg', 'WALK_04.jpg', 'WALK_05.jpg', 'WALK_06.jpg']
   }
 ];
 
