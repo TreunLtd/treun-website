@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import projects from '../data/projects';
 import './ProjectDetailPage.css';
- 
+
 export default function ProjectDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projects.find(p => p.id === id);
   const [currentImage, setCurrentImage] = useState(0);
- 
+  const [showVideo, setShowVideo] = useState(project?.video ? true : false);
+
   if (!project) {
     return (
       <div className="project-detail-page">
@@ -19,17 +20,20 @@ export default function ProjectDetailPage() {
       </div>
     );
   }
- 
+
   const hasImages = project.images && project.images.length > 0;
- 
+  const hasVideo = !!project.video;
+
   const prevImage = () => {
+    setShowVideo(false);
     setCurrentImage(prev => (prev === 0 ? project.images.length - 1 : prev - 1));
   };
- 
+
   const nextImage = () => {
+    setShowVideo(false);
     setCurrentImage(prev => (prev === project.images.length - 1 ? 0 : prev + 1));
   };
- 
+
   return (
     <div className="project-detail-page">
       <section className="project-detail-hero">
@@ -38,34 +42,61 @@ export default function ProjectDetailPage() {
           <p>{project.location}</p>
         </div>
       </section>
- 
+
       <section className="project-detail-content">
         <div className="section-container">
           <div className="detail-grid">
- 
+
             {/* LEFT: Slideshow */}
             <div className="project-gallery">
-              {hasImages ? (
+              {hasVideo || hasImages ? (
                 <>
-                  {/* Main Image */}
+                  {/* Main Display */}
                   <div className="slideshow-main">
-                    <button className="slide-arrow slide-prev" onClick={prevImage}>&#8249;</button>
-                    <img
-                      src={`/images/projects/${project.folder}/${project.images[currentImage]}`}
-                      alt={project.name}
-                      className="slideshow-image"
-                    />
-                    <button className="slide-arrow slide-next" onClick={nextImage}>&#8250;</button>
-                    <div className="slide-counter">{currentImage + 1} / {project.images.length}</div>
+                    {showVideo ? (
+                      <video
+                        src={`/images/projects/${project.folder}/${project.video}`}
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="slideshow-image"
+                      />
+                    ) : (
+                      <>
+                        <button className="slide-arrow slide-prev" onClick={prevImage}>&#8249;</button>
+                        <img
+                          src={`/images/projects/${project.folder}/${project.images[currentImage]}`}
+                          alt={project.name}
+                          className="slideshow-image"
+                        />
+                        <button className="slide-arrow slide-next" onClick={nextImage}>&#8250;</button>
+                        <div className="slide-counter">{currentImage + 1} / {project.images.length}</div>
+                      </>
+                    )}
                   </div>
- 
+
                   {/* Thumbnails */}
                   <div className="slideshow-thumbs">
-                    {project.images.map((image, index) => (
+                    {hasVideo && (
+                      <div
+                        className={`thumb-item ${showVideo ? 'active' : ''}`}
+                        onClick={() => setShowVideo(true)}
+                      >
+                        <video
+                          src={`/images/projects/${project.folder}/${project.video}`}
+                          muted
+                          className="thumb-video"
+                        />
+                        <div className="thumb-play">▶</div>
+                      </div>
+                    )}
+                    {hasImages && project.images.map((image, index) => (
                       <div
                         key={index}
-                        className={`thumb-item ${index === currentImage ? 'active' : ''}`}
-                        onClick={() => setCurrentImage(index)}
+                        className={`thumb-item ${!showVideo && index === currentImage ? 'active' : ''}`}
+                        onClick={() => { setShowVideo(false); setCurrentImage(index); }}
                       >
                         <img
                           src={`/images/projects/${project.folder}/${image}`}
@@ -79,7 +110,7 @@ export default function ProjectDetailPage() {
                 <div className="no-images">Images coming soon.</div>
               )}
             </div>
- 
+
             {/* RIGHT: Project Details */}
             <div className="project-details">
               <div className="project-meta">
@@ -100,29 +131,29 @@ export default function ProjectDetailPage() {
                   <p>{project.timeline}</p>
                 </div>
               </div>
- 
+
               <div className="project-section">
                 <h2>Challenge</h2>
                 <p>{project.challenge}</p>
               </div>
- 
+
               <div className="project-section">
                 <h2>Approach</h2>
                 <p>{project.approach}</p>
               </div>
- 
+
               <div className="project-section">
                 <h2>Outcome</h2>
                 <p>{project.outcome}</p>
               </div>
- 
+
               <div className="project-nav">
                 <button className="back-button" onClick={() => navigate(-1)}>
                   ← Back to Projects
                 </button>
               </div>
             </div>
- 
+
           </div>
         </div>
       </section>
