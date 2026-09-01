@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 'will',
+    id: 'WILL',
     name: 'Willjames Ave, Algies Bay',
     location: 'Algies Bay, Warkworth',
     value: '$6.5M',
@@ -16,7 +16,7 @@ const projects = [
     outcome: 'Four completed premium waterfront residences successfully delivered and retained as investment properties generating strong rental income.'
   },
   {
-    id: 'thet',
+    id: 'THET',
     name: 'The Terrace, Herald Island',
     location: 'Herald Island, Auckland',
     value: '$2.0M',
@@ -32,7 +32,7 @@ const projects = [
     outcome: 'Completed on time and within budget. Sophisticated waterfront residence delivered to premium specifications.'
   },
   {
-    id: 'mano',
+    id: 'MANO',
     name: 'Manor Place, Point Chevalier',
     location: 'Point Chevalier, Auckland',
     value: '$3.5M',
@@ -40,15 +40,15 @@ const projects = [
     client: 'Nilesh',
     timeline: '2 years',
     featured: true,
-    folder: 'mano',
-    images: ['mano_01.jpg','MANO_02.jpg','MANO_03.jpg','MANO_04.jpg','MANO_05.jpg','MANO_06.jpg','MANO_07.jpg','MANO_08.jpg'],
+    folder: 'MANO',
+    images: ['MANO_01.jpg','MANO_02.jpg','MANO_03.jpg','MANO_04.jpg','MANO_05.jpg','MANO_06.jpg','MANO_07.jpg','MANO_08.jpg'],
     summary: '4-lot subdivision with 3 new houses including 3-bedroom stand-alone and 2x 2-bed duplex.',
     challenge: 'Tight site, funding steps, difficult stormwater drainage requiring thrusting under the road, council coordination on neglected infrastructure.',
     approach: 'As main contractor and PM, Treun led drainage feasibility studies and council engagement. Funding staged carefully. Stormwater rerouting coordinated with engineers.',
     outcome: 'Successfully completed, on time and under budget.'
   },
   {
-    id: 'sea2',
+    id: 'SEAV',
     name: 'Seaview Terrace, Mt Albert',
     location: 'Mt Albert, Auckland',
     value: '$6.0M',
@@ -64,7 +64,7 @@ const projects = [
     outcome: 'Successfully completed, on time and under budget.'
   },
   {
-    id: 'west',
+    id: 'WEST',
     name: 'West Coast Rd, Makarau Warkworth',
     location: 'West Coast Road, Makarau, Warkworth',
     value: '$2.0M',
@@ -80,7 +80,7 @@ const projects = [
     outcome: 'Successfully completed. Demonstrated capability in specialized off-grid systems and remote site delivery.'
   },
   {
-    id: 'pasa',
+    id: 'PASA',
     name: 'Pasadena Ave, Point Chevalier',
     location: 'Point Chevalier, Auckland',
     value: '$2.5M',
@@ -96,7 +96,7 @@ const projects = [
     outcome: 'Successfully completed. Very profitable project demonstrating integrated design and delivery capability.'
   },
   {
-    id: 'poin',
+    id: 'POIN',
     name: 'Point View Drive, East Tamaki',
     location: 'East Tamaki, Auckland',
     value: '$2.0M',
@@ -112,7 +112,7 @@ const projects = [
     outcome: 'Successfully completed. Demonstrated expertise in complex earthworks and specialized retaining solutions.'
   },
   {
-    id: 'walk',
+    id: 'WALK',
     name: 'Walker Rd, Point Chevalier',
     location: 'Point Chevalier, Auckland',
     value: '$4.5M',
@@ -128,7 +128,7 @@ const projects = [
     outcome: 'Successfully completed. Demonstrated capability in remediated site development and complex ground condition management.'
   },
   {
-    id: 'aaro',
+    id: 'AARO',
     name: 'Aaron St, Ellerslie',
     location: 'Ellerslie, Auckland',
     value: '$6.0M',
@@ -144,7 +144,7 @@ const projects = [
     outcome: 'Successfully completed and delivered. Client satisfaction led to additional project opportunities.'
   },
   {
-    id: 'alla',
+    id: 'ALLA',
     name: 'Allandale Rd, Mt Albert',
     location: 'Mt Albert, Auckland',
     value: '$6.5M',
@@ -160,7 +160,7 @@ const projects = [
     outcome: 'Successfully completed on time and under budget.'
   },
   {
-    id: 'bell',
+    id: 'BELL',
     name: 'Belle Terrace, Waiheke Island',
     location: 'Waiheke Island, Auckland',
     value: '$1.0M',
@@ -176,7 +176,7 @@ const projects = [
     outcome: 'Successfully completed. Demonstrated expertise in modular construction and island delivery logistics.'
   },
   {
-    id: 'brew',
+    id: 'BREW',
     name: 'Caxton St, Brisbane',
     location: 'Brisbane, Australia',
     value: '$60K',
@@ -192,7 +192,7 @@ const projects = [
     outcome: 'Successfully completed.'
   },
   {
-    id: 'coro',
+    id: 'CORO',
     name: 'Coromandel Rd, Waiheke Island',
     location: 'Waiheke Island, Auckland',
     value: '$500K',
@@ -208,7 +208,7 @@ const projects = [
     outcome: 'Successfully completed. Innovative modular construction approach demonstrated.'
   },
   {
-    id: 'foly',
+    id: 'FOLY',
     name: 'Foly Quarry Road, Albany',
     location: 'Albany, Auckland',
     value: '$600K',
@@ -224,7 +224,7 @@ const projects = [
     outcome: 'Successfully completed on time and under budget.'
   },
   {
-    id: 'gray',
+    id: 'GRAY',
     name: 'Brisbane Technology Park',
     location: 'Brisbane, Australia',
     value: '$5.0M',
@@ -240,7 +240,7 @@ const projects = [
     outcome: 'Successfully completed.'
   },
   {
-    id: 'hele',
+    id: 'HELE',
     name: 'Helena St, Massey',
     location: 'Massey, Auckland',
     value: '$1.0M',
@@ -256,7 +256,7 @@ const projects = [
     outcome: 'Successfully completed on time and under budget despite survey issues.'
   },
   {
-    id: 'kapi',
+    id: 'KAPI',
     name: 'Kapiti Rd, Paraparaumu',
     location: 'Paraparaumu, Kapiti',
     value: '$1.0M',
@@ -272,7 +272,7 @@ const projects = [
     outcome: 'Successfully completed. Very profitable project. Recently sold after 15-year hold.'
   },
   {
-    id: 'lori',
+    id: 'LORI',
     name: 'Lorian Place, East Tamaki',
     location: 'East Tamaki, Auckland',
     value: '$100K',
@@ -288,7 +288,7 @@ const projects = [
     outcome: 'Successfully completed. Buildings brought into full compliance.'
   },
   {
-    id: 'mati',
+    id: 'MATI',
     name: 'Maiere Rd, Onehunga',
     location: 'Onehunga, Auckland',
     value: '$500K',
@@ -304,7 +304,7 @@ const projects = [
     outcome: 'Successfully completed on time and under budget.'
   },
   {
-    id: 'nova',
+    id: 'NOVA',
     name: 'Nova Deko Modular Homes',
     location: 'Darra (Brisbane) and Foshan (China)',
     value: '$250K',
@@ -320,7 +320,7 @@ const projects = [
     outcome: 'Successful operations delivery.'
   },
   {
-    id: 'sev2',
+    id: 'SEV2',
     name: 'Seventh Ave, Waiheke',
     location: 'Waiheke Island, Auckland',
     value: '$2.0M',
@@ -336,7 +336,7 @@ const projects = [
     outcome: 'Successfully completed. Complex island logistics demonstrated.'
   },
   {
-    id: 'verb',
+    id: 'VERB',
     name: 'Verbena Ave, Glenfield',
     location: 'Glenfield, Auckland',
     value: '$1.0M',
@@ -352,7 +352,7 @@ const projects = [
     outcome: 'Successfully completed.'
   },
   {
-    id: 'virg',
+    id: 'VIRG',
     name: 'Virginia Circus, Snells Beach',
     location: 'Snells Beach, Auckland',
     value: '$200K',
