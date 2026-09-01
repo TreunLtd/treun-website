@@ -131,6 +131,11 @@
   .credentials-grid {
     grid-template-columns: 1fr;
   }
+
+  .featured-projects .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }
 .view-all-projects {
   text-align: center;
