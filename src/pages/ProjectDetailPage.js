@@ -1,95 +1,246 @@
-import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import projects from '../data/projects';
-import './ProjectDetailPage.css';
-
-export default function ProjectDetailPage() {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const project = projects.find(p => p.id === id);
-
-  if (!project) {
-    return (
-      <div className="project-detail-page">
-        <div className="project-not-found">
-          <h1>Project not found</h1>
-          <button onClick={() => navigate(-1)}>← Go Back</button>
-        </div>
-      </div>
-    );
+.project-detail-page {
+  flex: 1;
+}
+ 
+/* HERO */
+.project-detail-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+ 
+.project-detail-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+ 
+.project-detail-hero-content h1 {
+  font-family: 'Georgia', serif;
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+ 
+.project-detail-hero-content p {
+  font-size: 16px;
+  color: #cccccc;
+}
+ 
+/* CONTENT LAYOUT */
+.project-detail-content {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+ 
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+ 
+/* SLIDESHOW - MAIN IMAGE */
+.slideshow-main {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+ 
+.slideshow-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+ 
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  font-size: 36px;
+  padding: 10px 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  line-height: 1;
+}
+ 
+.slide-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+.slide-prev {
+  left: 0;
+}
+ 
+.slide-next {
+  right: 0;
+}
+ 
+.slide-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+ 
+/* THUMBNAILS */
+.slideshow-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+}
+ 
+.thumb-item {
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+ 
+.thumb-item:hover {
+  opacity: 1;
+}
+ 
+.thumb-item.active {
+  opacity: 1;
+  border-color: #1a1a1a;
+}
+ 
+.thumb-item img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+}
+ 
+.no-images {
+  padding: 60px 20px;
+  text-align: center;
+  color: #999;
+  background-color: #f5f5f5;
+  font-size: 14px;
+}
+ 
+/* PROJECT DETAILS */
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+ 
+.meta-item h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  margin-bottom: 6px;
+  font-weight: normal;
+}
+ 
+.meta-item p {
+  font-size: 15px;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+ 
+.project-section {
+  margin-bottom: 30px;
+}
+ 
+.project-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+ 
+.project-section p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+ 
+.project-nav {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+ 
+.back-button {
+  background: none;
+  border: 2px solid #1a1a1a;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+ 
+.back-button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+ 
+/* NOT FOUND */
+.project-not-found {
+  text-align: center;
+  padding: 120px 20px;
+}
+ 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-
-  return (
-    <div className="project-detail-page">
-      <section className="project-detail-hero">
-        <div className="project-detail-hero-content">
-          <h1>{project.name}</h1>
-          <p>{project.location}</p>
-        </div>
-      </section>
-
-      <section className="project-detail-content">
-        <div className="section-container">
-          <div className="detail-grid">
-            {/* LEFT: Image Gallery */}
-            <div className="project-gallery">
-              <div className="gallery-grid">
-                {project.images.map((image, index) => (
-                  <div key={index} className="gallery-item">
-                    <img 
-  src={`/images/projects/${project.folder}/${image}`}
-  alt={`${project.name}`}
-/>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* RIGHT: Project Details */}
-            <div className="project-details">
-              <div className="project-meta">
-                <div className="meta-item">
-                  <h4>Project Value</h4>
-                  <p>{project.value}</p>
-                </div>
-                <div className="meta-item">
-                  <h4>Project Type</h4>
-                  <p>{project.type}</p>
-                </div>
-                <div className="meta-item">
-                  <h4>Client</h4>
-                  <p>{project.client}</p>
-                </div>
-                <div className="meta-item">
-                  <h4>Timeline</h4>
-                  <p>{project.timeline}</p>
-                </div>
-              </div>
-
-              <div className="project-section">
-                <h2>Challenge</h2>
-                <p>{project.challenge}</p>
-              </div>
-
-              <div className="project-section">
-                <h2>Approach</h2>
-                <p>{project.approach}</p>
-              </div>
-
-              <div className="project-section">
-                <h2>Outcome</h2>
-                <p>{project.outcome}</p>
-              </div>
-
-              <div className="project-nav">
-                <button className="back-button" onClick={() => navigate(-1)}>
-                  ← Back to Projects
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+ 
+  .slideshow-image {
+    height: 350px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .project-detail-hero-content h1 {
+    font-size: 28px;
+  }
+ 
+  .project-detail-content {
+    padding: 40px 20px;
+  }
+ 
+  .slideshow-image {
+    height: 250px;
+  }
+ 
+  .slideshow-thumbs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+ 
+  .project-meta {
+    grid-template-columns: 1fr 1fr;
+  }
 }
