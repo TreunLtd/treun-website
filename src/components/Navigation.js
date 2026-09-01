@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navigation.css';
 
 export default function Navigation() {
-  const [active, setActive] = useState('home');
+  const pathname = window.location.pathname;
 
   return (
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href="/" onClick={() => setActive('home')}>TREUN</a>
+          <a href="/">TREUN</a>
         </div>
         <ul className="nav-menu">
           <li className="nav-item">
             <a 
               href="/project-management" 
-              className={active === 'pm' ? 'nav-link active' : 'nav-link'}
-              onClick={() => setActive('pm')}
+              className={pathname === '/project-management' ? 'nav-link active' : 'nav-link'}
             >
               Project Management
             </a>
@@ -23,8 +22,7 @@ export default function Navigation() {
           <li className="nav-item">
             <a 
               href="/works" 
-              className={active === 'works' ? 'nav-link active' : 'nav-link'}
-              onClick={() => setActive('works')}
+              className={pathname === '/works' ? 'nav-link active' : 'nav-link'}
             >
               Treun Works
             </a>
@@ -32,8 +30,7 @@ export default function Navigation() {
           <li className="nav-item">
             <a 
               href="/contact" 
-              className={active === 'contact' ? 'nav-link active' : 'nav-link'}
-              onClick={() => setActive('contact')}
+              className={pathname === '/contact' ? 'nav-link active' : 'nav-link'}
             >
               Contact
             </a>
