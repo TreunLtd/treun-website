@@ -28,6 +28,14 @@ export default function Navigation() {
             </a>
           </li>
           <li className="nav-item">
+  <a 
+    href="/about" 
+    className={pathname === '/about' ? 'nav-link active' : 'nav-link'}
+  >
+    About
+  </a>
+</li>
+          <li className="nav-item">
             <a 
               href="/contact" 
               className={pathname === '/contact' ? 'nav-link active' : 'nav-link'}

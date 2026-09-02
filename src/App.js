@@ -8,6 +8,7 @@ import WorksPage from './pages/WorksPage';
 import ContactPage from './pages/ContactPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import AllProjectsPage from './pages/AllProjectsPage';
+import AboutPage from './pages/AboutPage';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/project/:id" element={<ProjectDetailPage />} />
           <Route path="/all-projects" element={<AllProjectsPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />
       </div>

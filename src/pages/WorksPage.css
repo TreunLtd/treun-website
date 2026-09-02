@@ -4,6 +4,8 @@
 
 .works-hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
   padding: 80px 20px;
   text-align: center;

@@ -6,7 +6,7 @@ import './WorksPage.css';
 export default function WorksPage() {
   return (
     <div className="works-page">
-      <section className="works-hero">
+      <section className="works-hero" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/projects/POIN/POIN_01.jpg')" }}>
         <div className="works-hero-content">
           <h1>Treun Works</h1>
           <p>Delivering Complex Projects</p>
@@ -49,7 +49,6 @@ export default function WorksPage() {
         <div className="section-container">
           <h2>Delivered Projects</h2>
           <p className="section-subtitle">Recent construction and civil works delivery across residential and infrastructure sectors.</p>
-          
           <div className="projects-grid">
             {projects.map(project => (
               <CaseStudyCard key={project.id} project={project} />

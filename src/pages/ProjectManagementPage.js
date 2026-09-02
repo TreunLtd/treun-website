@@ -6,7 +6,7 @@ import './ProjectManagementPage.css';
 export default function ProjectManagementPage() {
   return (
     <div className="pm-page">
-      <section className="pm-hero">
+      <section className="pm-hero" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/pm_hero_gantt.jpg')" }}>
         <div className="pm-hero-content">
           <h1>Treun Project Management</h1>
           <p>Project management, design coordination, and procurement for civil infrastructure and commercial projects.</p>
@@ -52,7 +52,6 @@ export default function ProjectManagementPage() {
         <div className="section-container">
           <h2>Case Studies</h2>
           <p className="section-subtitle">Project management delivery across infrastructure and commercial projects.</p>
-          
           <div className="projects-grid">
             {projects.map(project => (
               <CaseStudyCard key={project.id} project={project} />
