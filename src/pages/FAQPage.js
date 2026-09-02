@@ -7,7 +7,7 @@ const faqs = [
     questions: [
       {
         q: 'What areas do you service?',
-        a: 'We are based in Algies Bay, Warkworth and primarily service Greater Auckland and Northland. We have delivered projects across Auckland including the North Shore, West Auckland, Central Auckland, East Auckland, and Waiheke Island, as well as regional projects in Kapiti Coast and Australia.'
+        a: 'We are based in Algies Bay, Warkworth and primarily service Greater Auckland. We have delivered projects across Auckland including the North Shore, West Auckland, Central Auckland, East Auckland, and Waiheke Island, as well as regional projects on the Kapiti Coast and Queensland Australia.'
       },
       {
         q: 'What is the difference between Treun Project Management and Treun Works?',
@@ -19,7 +19,7 @@ const faqs = [
       },
       {
         q: 'What qualifications does the team hold?',
-        a: 'Director Matt Chernishov holds an MBA from Massey University and is a Licensed Building Practitioner (carpentry specialty). Treun is a member of NZ Certified Builders, is registered on the Downer Felix Vendor Marketplace, holds professional indemnity and public liability insurance, and operates HazardCo H&S systems.'
+        a: 'Director Matt Chernishov holds an MBA from Massey University and is a Licensed Building Practitioner (carpentry specialty). Treun Works is a member of NZ Certified Builders, is registered on the Downer Felix Vendor Marketplace, holds professional indemnity and public liability insurance, and operates HazardCo H&S systems.'
       },
       {
         q: 'How do I get started?',
