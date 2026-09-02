@@ -12,34 +12,27 @@ export default function Navigation() {
         </div>
         <ul className="nav-menu">
           <li className="nav-item">
-            <a 
-              href="/project-management" 
-              className={pathname === '/project-management' ? 'nav-link active' : 'nav-link'}
-            >
+            <a href="/project-management" className={pathname === '/project-management' ? 'nav-link active' : 'nav-link'}>
               Project Management
             </a>
           </li>
           <li className="nav-item">
-            <a 
-              href="/works" 
-              className={pathname === '/works' ? 'nav-link active' : 'nav-link'}
-            >
+            <a href="/works" className={pathname === '/works' ? 'nav-link active' : 'nav-link'}>
               Treun Works
             </a>
           </li>
           <li className="nav-item">
-  <a 
-    href="/about" 
-    className={pathname === '/about' ? 'nav-link active' : 'nav-link'}
-  >
-    About
-  </a>
-</li>
+            <a href="/about" className={pathname === '/about' ? 'nav-link active' : 'nav-link'}>
+              About
+            </a>
+          </li>
           <li className="nav-item">
-            <a 
-              href="/contact" 
-              className={pathname === '/contact' ? 'nav-link active' : 'nav-link'}
-            >
+            <a href="/faq" className={pathname === '/faq' ? 'nav-link active' : 'nav-link'}>
+              FAQs
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/contact" className={pathname === '/contact' ? 'nav-link active' : 'nav-link'}>
               Contact
             </a>
           </li>

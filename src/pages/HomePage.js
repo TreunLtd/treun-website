@@ -16,6 +16,12 @@ export default function HomePage() {
     <div className="home-page">
       <HeroSection />
 
+      <section className="entity-statement">
+        <div className="section-container">
+          <p>Treun is an Auckland-based project management and construction company. We provide residential and commercial project management, feasibility studies, design coordination, and construction delivery across Greater Auckland.</p>
+        </div>
+      </section>
+
       <section className="two-column-section">
         <div className="column left-column">
           <h2>Treun Project Management</h2>
@@ -39,7 +45,7 @@ export default function HomePage() {
           <h2>Featured Projects</h2>
           <p className="section-subtitle">Recent delivery across infrastructure and residential development.</p>
 
-          <div className="featured-projects .projects-grid">
+          <div className="projects-grid">
             {featuredProjects.map(project => (
               <CaseStudyCard key={project.id} project={project} />
             ))}

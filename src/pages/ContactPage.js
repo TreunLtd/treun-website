@@ -40,8 +40,12 @@ export default function ContactPage() {
               </div>
 
               <div className="contact-entity">
-                <h2>Location</h2>
+                <h2>Location & Hours</h2>
                 <p>Algies Bay<br />Warkworth, Auckland<br />New Zealand</p>
+                <div className="contact-details">
+                  <p><strong>Monday – Friday:</strong> 7:00am – 5:00pm</p>
+                  <p><strong>Saturday – Sunday:</strong> Closed</p>
+                </div>
               </div>
             </div>
 

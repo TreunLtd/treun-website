@@ -161,3 +161,17 @@
 .view-all-button:hover {
   background-color: #333333;
 }
+.entity-statement {
+  background-color: #f5f5f5;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.entity-statement p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
