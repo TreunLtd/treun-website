@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CaseStudyCard from '../components/CaseStudyCard';
 import projects from '../data/projects';
 import './WorksPage.css';
 
 export default function WorksPage() {
+
+  useEffect(() => {
+    document.title = 'Construction & Civil Works Auckland | Treun Works';
+  }, []);
+
   return (
     <div className="works-page">
       <section className="works-hero" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/projects/POIN/POIN_01.jpg')" }}>
@@ -17,7 +22,7 @@ export default function WorksPage() {
       <section className="works-about">
         <div className="section-container">
           <h2>Our Capability</h2>
-          <p>From subdivisions to infrastructure, we manage complex projects with precision and accountability. Our hands-on experience spans residential development, commercial builds, infrastructure works, and innovative construction methodologies.</p>
+          <p>From simple house builds and residential subdivisions through to complex civil infrastructure — we approach every project with the same hands-on care and accountability. We understand the owner's perspective because we've developed our own projects. We know what it costs, what can go wrong, and how to keep things moving. We have teams of trusted trades and suppliers available, contracted on a project-by-project basis, so we can scale to fit your project.</p>
         </div>
       </section>
 

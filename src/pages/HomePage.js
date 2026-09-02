@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
 import CaseStudyCard from '../components/CaseStudyCard';
 import projects from '../data/projects';
 import './HomePage.css';
 
 export default function HomePage() {
+
+  useEffect(() => {
+    document.title = 'Treun | Project Management & Construction Auckland';
+  }, []);
+
   const featuredProjects = projects.filter(p => p.featured);
 
   return (
     <div className="home-page">
       <HeroSection />
-      
+
       <section className="two-column-section">
         <div className="column left-column">
           <h2>Treun Project Management</h2>
-          <p>Project management, design coordination, and procurement for civil infrastructure and commercial projects.</p>
-          <p>We engage early with feasibility studies and preliminary options analysis—including bulk and location modelling—before you commit to designers or architects. Our role is to establish viability and guide the path forward.</p>
-          <p>We partner with Tier 1 contractors, developers, and government agencies to deliver complex projects on time and within budget.</p>
+          <p>Project management, design coordination, and procurement for civil infrastructure, commercial and residential projects.</p>
+          <p>We engage early with feasibility studies and preliminary options analysis—including bulk and location modelling—before you commit to designers or architects. Our role is to understand where you want to be in 5 or 10 years time so we can help you with planning for the most appropriate outcome.</p>
+          <p>We work alongside head contractors, developers, and government agencies. We can't promise every project runs to schedule — but we'll always be working hard to keep things moving.</p>
           <a href="/project-management" className="read-more">Learn More →</a>
         </div>
 
@@ -24,6 +29,7 @@ export default function HomePage() {
           <h2>Treun Works</h2>
           <p>Construction and civil works delivery. Delivering Complex Projects.</p>
           <p>From small residential subdivisions and house builds for owner-clients to complex civil infrastructure. We specialize in understanding the owner's perspective and delivering quality outcomes, whether you're managing your own project or need full delivery.</p>
+          <p>We have teams of trusted trades and suppliers available, contracted on a project-by-project basis, so we can scale to fit your project.</p>
           <a href="/works" className="read-more">Learn More →</a>
         </div>
       </section>
@@ -32,8 +38,8 @@ export default function HomePage() {
         <div className="section-container">
           <h2>Featured Projects</h2>
           <p className="section-subtitle">Recent delivery across infrastructure and residential development.</p>
-          
-          <div className="projects-grid">
+
+          <div className="featured-projects .projects-grid">
             {featuredProjects.map(project => (
               <CaseStudyCard key={project.id} project={project} />
             ))}

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './AboutPage.css';
 
 export default function AboutPage() {
+
+  useEffect(() => {
+    document.title = 'About Treun | Auckland Project Management & Construction';
+  }, []);
+
   return (
     <div className="about-page">
 
-      {/* HERO */}
       <section className="about-hero">
         <div className="about-hero-content">
           <h1>About Treun</h1>
@@ -13,7 +17,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TREUN STORY */}
       <section className="about-section">
         <div className="about-container">
           <div className="about-two-col">
@@ -34,7 +37,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MATT'S BIO */}
       <section className="about-section about-section-dark">
         <div className="about-container">
           <h2>Matt Chernishov — Director</h2>
@@ -44,6 +46,11 @@ export default function AboutPage() {
               <p>His career spans residential development, commercial builds, offsite and modular construction, and civil infrastructure. He has managed projects from small owner-builder builds through to complex multi-lot subdivisions, premanufactured housing delivered to remote islands, and commercial fitouts in Australia.</p>
             </div>
             <div className="about-col">
+              <img
+                src="/images/photo_of_Matt.jpg"
+                alt="Matt Chernishov - Director, Treun"
+                className="matt-photo"
+              />
               <p>Matt has worked as a project manager, design manager, operations manager, and owner-developer — giving him a full-cycle understanding of what it takes to deliver a project well, and what it costs when things go wrong.</p>
               <p>He is a member of NZ Certified Builders and is registered on the Downer Felix Vendor Marketplace. Treun carries full professional indemnity and public liability insurance, and operates with HazardCo H&S systems.</p>
               <div className="credentials-list">
@@ -59,7 +66,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TRUSTED NETWORK */}
       <section className="about-section">
         <div className="about-container about-center">
           <h2>Our Network</h2>
@@ -67,7 +73,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* VALUES */}
       <section className="about-section about-section-grey">
         <div className="about-container">
           <h2>What We Believe In</h2>

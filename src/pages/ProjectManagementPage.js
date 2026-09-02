@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CaseStudyCard from '../components/CaseStudyCard';
 import projects from '../data/projects';
 import './ProjectManagementPage.css';
 
 export default function ProjectManagementPage() {
+
+  useEffect(() => {
+    document.title = 'Project Management Auckland | Treun';
+  }, []);
+
   return (
     <div className="pm-page">
       <section className="pm-hero" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/pm_hero_gantt.jpg')" }}>
@@ -16,7 +21,7 @@ export default function ProjectManagementPage() {
       <section className="pm-about">
         <div className="section-container">
           <h2>Our Approach</h2>
-          <p>We partner with Tier 1 contractors, developers, and government agencies to deliver complex projects on time and within budget. Our expertise spans feasibility studies, preliminary options analysis, design coordination, procurement management, and full project delivery oversight. We engage early to test project viability before significant investment.</p>
+          <p>We are residential specialists with experience across subdivisions up to 10 lots. We engage early — before architects, before designers — with feasibility studies, options analysis, and bulk and location modelling to understand what's possible before you commit. We want to understand where you want to be in 5 or 10 years so we can help plan the most appropriate path forward. From residential subdivisions to small and medium civil projects — roads, drainage, cut and fill — we help you navigate the full process. We can't promise every project runs to schedule — but we'll always be working hard to keep things moving.</p>
         </div>
       </section>
 
@@ -63,7 +68,7 @@ export default function ProjectManagementPage() {
       <section className="pm-cta">
         <div className="section-container">
           <h2>Ready to discuss your project?</h2>
-          <p>Contact us to learn how we can support your next complex project.</p>
+          <p>Contact us to learn how we can support your next project.</p>
           <a href="/contact" className="cta-button">Get in Touch</a>
         </div>
       </section>

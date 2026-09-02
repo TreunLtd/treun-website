@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import projects from '../data/projects';
 import './ProjectDetailPage.css';
@@ -9,6 +9,12 @@ export default function ProjectDetailPage() {
   const project = projects.find(p => p.id === id);
   const [currentImage, setCurrentImage] = useState(0);
   const [showVideo, setShowVideo] = useState(project?.video ? true : false);
+
+  useEffect(() => {
+    if (project) {
+      document.title = `${project.name} | Treun`;
+    }
+  }, [project]);
 
   if (!project) {
     return (
@@ -47,11 +53,9 @@ export default function ProjectDetailPage() {
         <div className="section-container">
           <div className="detail-grid">
 
-            {/* LEFT: Slideshow */}
             <div className="project-gallery">
               {hasVideo || hasImages ? (
                 <>
-                  {/* Main Display */}
                   <div className="slideshow-main">
                     {showVideo ? (
                       <video
@@ -77,7 +81,6 @@ export default function ProjectDetailPage() {
                     )}
                   </div>
 
-                  {/* Thumbnails */}
                   <div className="slideshow-thumbs">
                     {hasVideo && (
                       <div
@@ -111,7 +114,6 @@ export default function ProjectDetailPage() {
               )}
             </div>
 
-            {/* RIGHT: Project Details */}
             <div className="project-details">
               <div className="project-meta">
                 <div className="meta-item">

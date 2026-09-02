@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CaseStudyCard from '../components/CaseStudyCard';
 import projects from '../data/projects';
 import './AllProjectsPage.css';
 
 export default function AllProjectsPage() {
+
+  useEffect(() => {
+    document.title = 'Projects | Treun Auckland';
+  }, []);
+
   return (
     <div className="all-projects-page">
       <section className="all-projects-hero">

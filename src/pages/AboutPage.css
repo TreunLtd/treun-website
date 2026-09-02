@@ -162,3 +162,9 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.matt-photo {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 25px;
+  display: block;
+}
