@@ -5,15 +5,7 @@ export default function CaseStudyCard({ project }) {
   return (
     <div className="case-study-card">
       <div className="card-image">
-        {project.video ? (
-          <video
-            src={`/images/projects/${project.folder}/${project.video}`}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        ) : project.images && project.images.length > 0 ? (
+        {project.images && project.images.length > 0 ? (
           <img 
             src={`/images/projects/${project.folder}/${project.images[0]}`}
             alt={project.name}
