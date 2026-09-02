@@ -12,13 +12,13 @@ export default function Navigation() {
         </div>
         <ul className="nav-menu">
           <li className="nav-item">
-            <a href="/project-management" className={pathname === '/project-management' ? 'nav-link active' : 'nav-link'}>
-              Project Management
+            <a href="/services" className={pathname === '/services' ? 'nav-link active' : 'nav-link'}>
+              Services
             </a>
           </li>
           <li className="nav-item">
-            <a href="/works" className={pathname === '/works' ? 'nav-link active' : 'nav-link'}>
-              Treun Works
+            <a href="/all-projects" className={pathname === '/all-projects' ? 'nav-link active' : 'nav-link'}>
+              Projects
             </a>
           </li>
           <li className="nav-item">
