@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="about-hero">
         <div className="about-hero-content">
           <h1>About Treun</h1>
-          <p>Treun (tree-un) — Scottish Gaelic for strong.</p>
+<p>Treun (t̪ʰɾʲeːn) — Scottish Gaelic for strong | brave | solid.</p>
         </div>
       </section>
 
@@ -27,12 +27,12 @@ export default function AboutPage() {
               <p>Treun was founded by Matt Chernishov with a simple belief: that good buildings require good thinking at every stage, from the first feasibility sketch through to the final nail.</p>
             </div>
             <div className="about-col">
-              <h2>Two Disciplines</h2>
-              <p>Treun operates as two distinct but complementary entities under one roof.</p>
-              <p><strong>Treun Project Management</strong> handles the thinking side — feasibility, options analysis, design coordination, procurement, and contract administration. We engage early, before architects and designers are involved, to help clients understand what is actually viable before significant spend is committed.</p>
-              <p><strong>Treun Works</strong> handles the building side — construction and civil works delivery across residential, commercial, and infrastructure projects. From simple house builds to complex multi-lot subdivisions and civil infrastructure.</p>
-              <p>Clients can use one or both. The same values and the same standard of work apply across both.</p>
-            </div>
+  <h2>One Brand. Two Capabilities.</h2>
+  <p>Treun delivers across two disciplines — project management and construction — under one brand. Depending on your project, we engage as advisors, builders, or both.</p>
+  <p>Our <strong>project management</strong> arm handles feasibility, options analysis, design coordination, procurement, and contract administration. We engage early — before architects and designers are involved — to establish what is actually viable before you commit significant spend.</p>
+  <p>Our <strong>construction arm</strong>, trading as Treun Works, handles physical delivery — residential builds, civil works, subdivisions, and infrastructure. From simple house builds through to complex multi-lot developments.</p>
+  <p>The same values and the same standard of work apply across both.</p>
+</div>
           </div>
         </div>
       </section>

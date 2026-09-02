@@ -10,7 +10,7 @@ export default function ServicesPage() {
   return (
     <div className="services-page">
 
-      <section className="services-hero">
+      <section className="services-hero" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/projects/WEST/WEST_05.jpg')" }}>
         <div className="services-hero-content">
           <h1>Services</h1>
           <p>Project management and construction delivery across residential, commercial, and civil sectors.</p>

@@ -157,3 +157,17 @@
     align-self: stretch;
   }
 }
+.form-success {
+  background-color: #f0f7f0;
+  border: 1px solid #4caf50;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #2e7d32;
+}
+
+.form-error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 10px;
+}
