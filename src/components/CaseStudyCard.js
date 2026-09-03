@@ -2,13 +2,15 @@ import React from 'react';
 import './CaseStudyCard.css';
 
 export default function CaseStudyCard({ project }) {
+  const altText = `${project.name} - ${project.type} - ${project.location} - Treun`;
+
   return (
     <div className="case-study-card">
       <div className="card-image">
         {project.images && project.images.length > 0 ? (
           <img 
             src={`/images/projects/${project.folder}/${project.images[0]}`}
-            alt={project.name}
+            alt={altText}
           />
         ) : (
           <div className="placeholder-image"></div>

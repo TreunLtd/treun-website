@@ -29,6 +29,7 @@ export default function ProjectDetailPage() {
 
   const hasImages = project.images && project.images.length > 0;
   const hasVideo = !!project.video;
+  const altText = (index) => `${project.name} - ${project.type} - ${project.location} - image ${index + 1} - Treun`;
 
   const prevImage = () => {
     setShowVideo(false);
@@ -72,7 +73,7 @@ export default function ProjectDetailPage() {
                         <button className="slide-arrow slide-prev" onClick={prevImage}>&#8249;</button>
                         <img
                           src={`/images/projects/${project.folder}/${project.images[currentImage]}`}
-                          alt={project.name}
+                          alt={altText(currentImage)}
                           className="slideshow-image"
                         />
                         <button className="slide-arrow slide-next" onClick={nextImage}>&#8250;</button>
@@ -103,7 +104,7 @@ export default function ProjectDetailPage() {
                       >
                         <img
                           src={`/images/projects/${project.folder}/${image}`}
-                          alt={project.name}
+                          alt={altText(index)}
                         />
                       </div>
                     ))}
