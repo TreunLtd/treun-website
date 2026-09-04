@@ -1,7 +1,7 @@
 .about-page {
   flex: 1;
 }
-
+ 
 /* HERO */
 .about-hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
@@ -9,93 +9,121 @@
   padding: 80px 20px;
   text-align: center;
 }
-
+ 
 .about-hero-content {
   max-width: 800px;
   margin: 0 auto;
 }
-
+ 
 .about-hero-content h1 {
   font-size: 48px;
   font-weight: normal;
   margin-bottom: 15px;
 }
-
+ 
 .about-hero-content p {
   font-size: 18px;
   color: #cccccc;
   font-style: italic;
 }
-
+ 
 /* SECTIONS */
 .about-section {
   padding: 80px 20px;
   background-color: #ffffff;
 }
-
+ 
 .about-section-dark {
   background-color: #1a1a1a;
   color: #ffffff;
 }
-
+ 
 .about-section-dark h2 {
   color: #ffffff;
 }
-
+ 
 .about-section-dark p {
   color: #cccccc;
 }
-
+ 
 .about-section-grey {
   background-color: #f5f5f5;
 }
-
+ 
 .about-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
-
+ 
 .about-center {
   text-align: center;
   max-width: 800px;
+  margin: 0 auto;
 }
-
+ 
 .about-lead {
   font-size: 18px;
   line-height: 1.8;
   color: #444;
   margin-top: 20px;
 }
-
-/* TWO COLUMN */
+ 
+/* TWO COLUMN — STORY SECTION */
 .about-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   margin-top: 40px;
 }
-
-.about-col h2 {
-  font-size: 28px;
-  font-weight: normal;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
+ 
 .about-col p {
   font-size: 15px;
   line-height: 1.8;
   color: #666;
   margin-bottom: 15px;
 }
-
+ 
+.about-section-dark .about-col p {
+  color: #cccccc;
+}
+ 
+/* MATT SECTION — PHOTO LEFT, BIO RIGHT */
+.matt-section {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  margin-top: 40px;
+  align-items: start;
+}
+ 
+.matt-photo-col {
+  position: sticky;
+  top: 100px;
+}
+ 
+.matt-photo {
+  width: 100%;
+  display: block;
+}
+ 
+.matt-bio-col p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+ 
 h2 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: normal;
   margin-bottom: 10px;
   color: #1a1a1a;
 }
-
+ 
+.about-section-dark h2 {
+  color: #ffffff;
+}
+ 
 /* CREDENTIALS */
 .credentials-list {
   display: flex;
@@ -103,7 +131,7 @@ h2 {
   gap: 10px;
   margin-top: 30px;
 }
-
+ 
 .credential-badge {
   background-color: #333333;
   color: #ffffff;
@@ -112,7 +140,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+ 
 /* VALUES */
 .values-grid {
   display: grid;
@@ -120,51 +148,60 @@ h2 {
   gap: 40px;
   margin-top: 40px;
 }
-
+ 
 .value-item h4 {
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
   color: #1a1a1a;
   font-weight: bold;
 }
-
+ 
 .value-item p {
   font-size: 14px;
   line-height: 1.7;
   color: #666;
 }
-
+ 
 /* RESPONSIVE */
+@media (max-width: 900px) {
+  .matt-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+ 
+  .matt-photo-col {
+    position: static;
+  }
+ 
+  .matt-photo {
+    max-width: 280px;
+  }
+}
+ 
 @media (max-width: 768px) {
   .about-hero-content h1 {
     font-size: 32px;
   }
-
+ 
   .about-two-col {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
+ 
   .values-grid {
     grid-template-columns: 1fr 1fr;
     gap: 25px;
   }
-
+ 
   .about-section {
     padding: 50px 20px;
   }
 }
-
+ 
 @media (max-width: 480px) {
   .values-grid {
     grid-template-columns: 1fr;
   }
-}
-.matt-photo {
-  width: 100%;
-  max-width: 350px;
-  margin-bottom: 25px;
-  display: block;
 }

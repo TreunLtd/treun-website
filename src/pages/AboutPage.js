@@ -38,33 +38,33 @@ export default function AboutPage() {
       </section>
 
       <section className="about-section about-section-dark">
-        <div className="about-container">
-          <h2>Matt Chernishov — Director</h2>
-          <div className="about-two-col">
-            <div className="about-col">
-              <p>Matt brings a rare combination of on-the-tools experience and formal business education. Holding an MBA from Massey University and a Licensed Building Practitioner qualification with a carpentry specialty, he understands construction from both the business and the trade perspective.</p>
-              <p>His career spans residential development, commercial builds, offsite and modular construction, and civil infrastructure. He has managed projects from small owner-builder builds through to complex multi-lot subdivisions, premanufactured housing delivered to remote islands, and commercial fitouts in Australia.</p>
-            </div>
-            <div className="about-col">
-              <img
-                src="/images/photo_of_Matt.jpg"
-                alt="Matt Chernishov - Director, Treun"
-                className="matt-photo"
-              />
-              <p>Matt has worked as a project manager, design manager, operations manager, and owner-developer — giving him a full-cycle understanding of what it takes to deliver a project well, and what it costs when things go wrong.</p>
-              <p>He is a member of NZ Certified Builders and is registered on the Downer Felix Vendor Marketplace. Treun carries full professional indemnity and public liability insurance, and operates with HazardCo H&S systems.</p>
-              <div className="credentials-list">
-                <div className="credential-badge">MBA — Massey University</div>
-                <div className="credential-badge">Licensed Building Practitioner (Carpentry)</div>
-                <div className="credential-badge">NZ Certified Builders</div>
-                <div className="credential-badge">HazardCo H&S Accredited</div>
-                <div className="credential-badge">PI/PL Insurance</div>
-                <div className="credential-badge">Downer Felix Vendor</div>
-              </div>
-            </div>
-          </div>
+  <div className="about-container">
+    <h2>Matt Chernishov — Director</h2>
+    <div className="matt-section">
+      <div className="matt-photo-col">
+        <img
+          src="/images/photo_of_Matt.jpg"
+          alt="Matt Chernishov - Director, Treun Project Management and Construction Auckland"
+          className="matt-photo"
+        />
+      </div>
+      <div className="matt-bio-col">
+        <p>Matt brings a rare combination of on-the-tools experience and formal business education. Holding an MBA from Massey University and a Licensed Building Practitioner qualification with a carpentry specialty, he understands construction from both the business and the trade perspective.</p>
+        <p>His career spans residential development, commercial builds, offsite and modular construction, and civil infrastructure. He has managed projects from small owner-builder builds through to complex multi-lot subdivisions, premanufactured housing delivered to remote islands, and commercial fitouts in Australia.</p>
+        <p>Matt has worked as a project manager, design manager, operations manager, and owner-developer — giving him a full-cycle understanding of what it takes to deliver a project well, and what it costs when things go wrong.</p>
+        <p>He is a member of NZ Certified Builders and is registered on the Downer Felix Vendor Marketplace. Treun carries full professional indemnity and public liability insurance, and operates with HazardCo H&S systems.</p>
+        <div className="credentials-list">
+          <div className="credential-badge">MBA — Massey University</div>
+          <div className="credential-badge">Licensed Building Practitioner (Carpentry)</div>
+          <div className="credential-badge">NZ Certified Builders</div>
+          <div className="credential-badge">HazardCo H&S Accredited</div>
+          <div className="credential-badge">PI/PL Insurance</div>
+          <div className="credential-badge">Downer Felix Vendor</div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="about-section">
         <div className="about-container about-center">
