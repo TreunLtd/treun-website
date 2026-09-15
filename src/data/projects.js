@@ -5,7 +5,6 @@ const projects = [
     location: 'Algies Bay, Warkworth',
     value: '$6.5M',
     type: 'Residential Subdivision & Build',
-    client: 'Treun Limited (Owner-Developer)',
     timeline: '3 years',
     featured: true,
     folder: 'WILL',
