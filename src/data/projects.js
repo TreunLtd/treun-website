@@ -11,10 +11,10 @@ const projects = [
     folder: 'WILL',
     images: ['WILL_01.jpg','WILL_02.jpg','WILL_03.jpg','WILL_04.jpg','WILL_05.jpg','WILL_06.jpg','WILL_07.jpg','WILL_08.jpg','WILL_09.jpg','WILL_10.jpg','WILL_11.jpg','WILL_12.jpg','WILL_13.jpg','WILL_14.jpg','WILL_15.jpg'],
     summary: '2-lot waterfront subdivision with 4 premium residences on difficult terrain.',
-    challenge: 'Funding challenges during post-COVID boom times, Auckland Anniversary day storm, materials shortages, steep site, difficult foundations, high specifications.',
-    approach: 'Treun integrated design leadership with meticulous procurement and adaptive project management. Custom cabinetry and architectural detailing designed in-house. Ground conditions engineered for steep terrain.',
-    outcome: 'Four completed premium waterfront residences successfully delivered and retained as investment properties generating strong rental income.'
-  },
+    challenge: 'From funding challenges post-COVID to the Auckland Anniversary day storm to navigating a steep site with deep foundations, this project had its fair share of challenges.',
+approach: 'We used our previous experience in design management to get the structural design to work with the desired end result. Carefully managing the budget and contractors, we managed to pull it all off in some of the most difficult times the New Zealand building industry has seen. The steep terrain and the requirement for deep foundations were a challenge because the property is on a steep slope on the waterfront. We\'re confident that those buildings won\'t be going anywhere in the next few hundred years.',
+outcome: 'Four stunning, premium waterfront dwellings, which are now generating rental income as long term investments.',
+client: 'Our partner company Khula Property Limited', },
   {
     id: 'THET',
     name: 'The Terrace, Herald Island',
