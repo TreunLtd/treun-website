@@ -26,9 +26,9 @@ client: 'Our partner company Khula Property Limited', },
     folder: 'THET',
     images: ['THET_01.jpg','THET_02.jpg','THET_03.jpg','THET_04.jpg','THET_05.jpg','THET_06.jpg','THET_07.jpg','THET_08.jpg','THET_09.jpg','THET_10.jpg','THET_11.jpg','THET_12.jpg','THET_13.jpg'],
     summary: 'Sophisticated waterfront residence with premium architectural detailing and complex construction sequencing.',
-    challenge: 'Soft ground with driven piles, premium finishes including charred Siberian larch cladding, phased construction with on-site client presence, 20m metalcraft thermospan roofing panels.',
-    approach: 'Ground conditions managed through geotechnical investigation and driven pile installation. Construction sequenced to allow client occupation during early phases. Premium detailing coordinated with specialist trades.',
-    outcome: 'Completed on time and within budget. Sophisticated waterfront residence delivered to premium specifications.'
+    challenge: 'From charred Siberian larch cladding to 20m long thermospan roofing panels, our client had a very specific vision. We were also working on soft ground, which required a driven piles. All of this, while phasing the construction due to client living on-site during construction.',
+    approach: 'We coordinated with specialist providers to deliver the premium finishings our clients were after, managed difficult ground conditions through clever foundation design and carried everything out with the client\'s comfort and living situation in mind.',
+    outcome: 'A premium, high-spec, waterfront property completed on budget.'
   },
   {
     id: 'WEST',
@@ -154,9 +154,9 @@ images: ['AARO_01.jpg'],
     folder: 'ALLA',
 images: ['ALLA_01.jpg','ALLA_02.jpg','ALLA_03.jpg','ALLA_04.jpg','ALLA_05.jpg','ALLA_06.jpg','ALLA_07.jpg'],
     summary: '10-lot residential subdivision on tight site with difficult ground conditions.',
-    challenge: 'Tight site with difficult ground conditions. Significant rock in ground creating earthworks challenges. Complex drainage requirements.',
-    approach: 'Specialist geotechnical analysis and earthworks design. Rock removal and site preparation carefully sequenced.',
-    outcome: 'Successfully completed on time and under budget.'
+    challenge: 'Fitting ten townhouses on ten separate titles on a tight site is a challenge in itself. Throw in a large protected Puriri tree, the requirements for impermeable parking areas, difficult ground conditions that included a significant amount of volcanic rock, complex drainage requirements and other earthwork challenges and we had our work cut out.',
+    approach: 'Having not been involved in the design of this one, we had to constantly manage design changes along the way to work in with all of the complexities of the project.',
+    outcome: 'Successfully completed on time and on budget but with a few extra grey hairs and a good dose of life experience.'
   },
   {
     id: 'BELL',
