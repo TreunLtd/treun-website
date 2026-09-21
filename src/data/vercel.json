@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://treun.co.nz/:path*",
+      "permanent": true
+    }
+  ]
+}
