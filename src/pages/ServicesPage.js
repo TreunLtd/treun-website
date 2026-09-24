@@ -3,15 +3,27 @@ import './ServicesPage.css';
 
 export default function ServicesPage() {
 
-  useEffect(() => {
+ useEffect(() => {
     document.title = 'Services | Treun Project Management & Construction Auckland';
 
     if (window.location.hash) {
       const id = window.location.hash.replace('#', '');
-      setTimeout(() => {
+
+      const scrollToSection = () => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
+      };
+
+      // Try a few times as images load and shift the layout
+      const timers = [100, 400, 800, 1500].map((t) => setTimeout(scrollToSection, t));
+
+      // Also scroll once everything (images) has fully loaded
+      window.addEventListener('load', scrollToSection);
+
+      return () => {
+        timers.forEach(clearTimeout);
+        window.removeEventListener('load', scrollToSection);
+      };
     }
   }, []);
 
