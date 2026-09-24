@@ -25,11 +25,11 @@ export default function ServicesPage() {
               <h2>Project Management</h2>
               <p className="division-tagline">A trusted pair of hands from start to finish.</p>
             </div>
-            <p className="division-intro">Engage us early in a project and we'll carry out feasibility studies and help assess your options. Our role is to establish the viability of a project and recommend next steps, before you invest time, money and energy into architects and designers. From there, we can oversee the entire project from start to finish or just the parts you need.</p>
+            <p className="division-intro">Engage us early in a project and we can help with your feasibility study and help with your options analysis. Our role is to work with you to establish the viability of your project and recommend next steps, before you invest time, money and energy into architects and designers. From there, we can oversee the entire project from start to finish or just the parts you need.</p>
             <div className="service-boxes">
               <div className="service-box">
                 <h3>Feasibility & Options Analysis</h3>
-                <p>This is the first piece of the puzzle, where we establish whether the vision you have in your head is feasible. We'll assess the site, run preliminary bulk and location modelling and assess your options. Doing this before engaging architects or designers can save significant time and money.</p>
+                <p>This is normally the first piece of the puzzle, where we establish whether the vision you have in your head makes sense financially in the long term. We'll assess the site, do preliminary bulk and location modelling and help you to assess your options. Doing this before engaging architects or designers can save significant time and money.</p>
               </div>
               <div className="service-box">
                 <h3>Project Management</h3>
@@ -37,11 +37,11 @@ export default function ServicesPage() {
               </div>
               <div className="service-box">
                 <h3>Design Coordination</h3>
-                <p>We'll work closely with architects and engineers to make sure everyone's aligned on the project requirements. We'll hold them accountable to excellence and be part of the review and approval process, all while keeping a close eye on costs and timelines throughout these initial stages.</p>
+                <p>We'll work closely with architects and engineers to make sure everyone's aligned on the project requirements. Because we are builders, investors and developers ourselves, we can make sure the design reflects your long term financial goals. We'll hold the design team accountable and be part of your design process, all while keeping a close eye on costs and timelines throughout these initial stages.</p>
               </div>
               <div className="service-box">
                 <h3>Procurement & Tender</h3>
-                <p>We'll work with you to find the right contractors and suppliers for the job, then manage the ongoing relationship. This includes taking care of the initial quoting process, appointing the right team, negotiating costs and timings and keeping everyone on track and in the know.</p>
+                <p>We'll work with you to find the right contractors and suppliers for the job, then manage the ongoing relationships. This includes taking care of the initial tendering process, appointing the right teams, negotiating costs and timings and keeping everyone on track and in the know.</p>
               </div>
               <div className="service-box">
                 <h3>Contract Administration</h3>
@@ -52,7 +52,7 @@ export default function ServicesPage() {
  
           <div className="services-divider"></div>
  
-          <div className="services-division">
+          <div className="services-division" id="construction">
             <div className="division-header">
               <h2>Construction & Civil Works</h2>
               <p className="division-tagline">Quality construction for projects big and small.</p>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
               </div>
               <div className="service-box">
                 <h3>Civil Works & Infrastructure</h3>
-                <p>We obsess over the things no one sees. Earthworks. Drainage and stormwater. Making sure there's strong, stable surfaces for building on. Bringing solutions for complex terrain. Whatever it is, we'll make sure your site is prepared for the project you've got in mind.</p>
+                <p>We obsess over the things no one sees. Earthworks. Drainage and stormwater. Making sure there's strong, stable starting point for building on. Bringing solutions for complex terrain. Whatever it is, we'll make sure your site is prepared for the project you've got in mind.</p>
               </div>
               <div className="service-box">
                 <h3>Subdivision Development</h3>

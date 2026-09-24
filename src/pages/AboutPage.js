@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div className="about-two-col">
             <div className="about-col">
               <h2>The Story</h2>
-              <p>Treun is a Scottish Gaelic word meaning strong. It was chosen deliberately — not as a boast, but as a commitment. Strong design. Strong build. Strong management. Strong returns.</p>
+              <p>Treun is a Scottish Gaelic word meaning strong. It was chosen deliberately — not as a boast, but as a commitment. Quality relationships, reliability and dependability.</p>
               <p>The name comes from Old Irish <em>trén</em>, rooted in Proto-Celtic and Proto-Indo-European origins meaning to be stiff, rigid, strong, brave, or sturdy. It is a word that has endured for thousands of years. That kind of longevity is what we aim to bring to every project we work on.</p>
               <p>Treun was founded by Matt Chernishov with a simple belief: that good buildings require good thinking at every stage, from the first feasibility sketch through to the final nail.</p>
             </div>

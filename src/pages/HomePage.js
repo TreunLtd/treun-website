@@ -28,13 +28,13 @@ export default function HomePage() {
             <div className="column">
               <h2>Treun Project Management</h2>
               <p className="col-sub">A trusted pair of hands from start to finish.</p>
-              <p>Engage us early in a project and we'll carry out feasibility studies and help assess your options. Our role is to establish the viability of a project and recommend next steps, before you invest time, money and energy into architects and designers. From there, we oversee the entire project from start to finish. Or just the parts you need our help with.</p>
+              <p>Engage us early in a project and we can help to carry out feasibility studies and undertake your options anaylsis. Our role is to establish the viability of your project and recommend next steps, before you invest time, money and energy into architects and designers. From there, we oversee the entire project from start to finish. Or just the parts you need our help with.</p>
               <ul className="service-list">
                 <li>Project management</li>
                 <li>Design coordination</li>
                 <li>Procurement</li>
                 <li>Bulk and location modelling</li>
-                <li>Partner with tier 1 contractors and developers</li>
+                <li>Partner with Tier 1 contractors and developers</li>
               </ul>
               <a href="/services" className="read-more">Learn More →</a>
             </div>
@@ -43,13 +43,13 @@ export default function HomePage() {
               <p className="col-sub">Quality construction for projects big and small.</p>
               <p>From residential subdivisions and builds to complex civil infrastructure, we're laser focused on delivering quality builds. Having developed many of our own projects, we understand the owner's perspective and can translate the construction speak, giving you clarity and confidence along the way.</p>
               <ul className="service-list">
-                <li>Residential construction</li>
+                <li>Residential & commercial construction</li>
                 <li>Civil works and infrastructure</li>
-                <li>Subdivision development</li>
+                <li>Subdivisions</li>
                 <li>Innovative construction methods</li>
-                <li>Partner with tier 1 contractors and developers</li>
+                <li>Partner with Tier 1 contractors and developers</li>
               </ul>
-              <a href="/services" className="read-more">Learn More →</a>
+              <a href="/services#construction" className="read-more">Learn More →</a>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function HomePage() {
       <section className="featured-projects">
         <div className="section-container">
           <h2>Featured Projects</h2>
-          <p className="section-subtitle">Here's a look at some of the projects we've delivered recently.</p>
+          <p className="section-subtitle">Here's a look at a handful of the projects we've delivered.</p>
           <div className="projects-grid">
             {featuredProjects.map(project => (
               <CaseStudyCard key={project.id} project={project} />
