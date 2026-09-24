@@ -1,25 +1,33 @@
 import React, { useEffect } from 'react';
 import './ServicesPage.css';
- 
+
 export default function ServicesPage() {
- 
+
   useEffect(() => {
     document.title = 'Services | Treun Project Management & Construction Auckland';
+
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
   }, []);
- 
+
   return (
     <div className="services-page">
- 
+
       <section className="services-hero" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/projects/WEST/WEST_05.jpg')" }}>
         <div className="services-hero-content">
           <h1>Services</h1>
           <p>Project management and construction delivery across residential, commercial, and civil sectors.</p>
         </div>
       </section>
- 
+
       <section className="services-section">
         <div className="services-container">
- 
+
           <div className="services-division">
             <div className="division-header">
               <h2>Project Management</h2>
@@ -49,9 +57,9 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
- 
+
           <div className="services-divider"></div>
- 
+
           <div className="services-division" id="construction">
             <div className="division-header">
               <h2>Construction & Civil Works</h2>
@@ -77,16 +85,15 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
- 
+
           <div className="services-cta">
             <h2>Ready to discuss your project?</h2>
             <p>Get in touch and let's chat about how we can help. The coffee's on Matt.</p>
             <a href="/contact" className="cta-button">Get in Touch</a>
           </div>
- 
+
         </div>
       </section>
     </div>
   );
 }
- 

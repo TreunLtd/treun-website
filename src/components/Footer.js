@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Services</h4>
           <p><a href="/services">Project Management</a></p>
-          <p><a href="/services">Construction & Civil Works</a></p>
+          <p><a href="/services#construction">Construction & Civil Works</a></p>
           <p><a href="/all-projects">Projects</a></p>
           <p><a href="/faq">FAQs</a></p>
         </div>
@@ -28,7 +28,7 @@ export default function Footer() {
 
         <div className="footer-section">
           <h4>Connect</h4>
-          <p><a href="https://linkedin.com/company/treun-project-management" target="_blank" rel="noreferrer">LinkedIn — Treun</a></p>     
+          <p><a href="https://linkedin.com/company/treun-project-management" target="_blank" rel="noreferrer">LinkedIn — Treun</a></p>
         </div>
       </div>
 
