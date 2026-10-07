@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       <section className="about-section about-section-dark">
   <div className="about-container">
-    <h2>Matt Chernishov — Director</h2>
+    <h2>Matt Chernishov MBA, LBP — Director</h2>
     <div className="matt-section">
       <div className="matt-photo-col">
         <img
