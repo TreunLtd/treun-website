@@ -24,7 +24,7 @@ export default function Footer() {
           <p>Mon–Fri: 7:00am – 5:00pm</p>
           <p>Phone: <a href="tel:+64276464624">+64 27 6464 624</a></p>
           <p>Email: <a href="mailto:matt@treun.co.nz?subject=Treun Project Enquiry">matt@treun.co.nz</a></p>
-          <a href="/matt-chernishov.vcf" download>Save contact</a>
+          <p><a href="/matt-chernishov.vcf" download>Save contact</a></p>
         </div>
 
         <div className="footer-section">
