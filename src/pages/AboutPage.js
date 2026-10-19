@@ -12,12 +12,10 @@ const credentials = [
 ];
 
 const values = [
-  { title: 'Longevity', text: 'We build things that last. Decisions made with 5, 10, 20 year + horizons in mind.' },
-  { title: 'Beauty', text: 'Aesthetics matter. Buildings for humans should have a warm sense of place.' },
-  { title: 'Function', text: 'Form follows function. Every design aspect should serve a purpose.' },
-  { title: 'Broad Thinking', text: 'We look at the full picture — investment, equity, design, delivery.' },
-  { title: 'Flexibility', text: 'We manage as much or as little as you need. Flexible contracts, no rigid thinking.' },
-  { title: 'Excellence', text: 'We hold ourselves to a high standard on every project, regardless of size.' },
+  { title: 'Strength', text: 'Robust thinking, sound decisions and work that stands up over time.' },
+  { title: 'Accountability', text: 'Taking ownership of decisions, commitments and outcomes.' },
+  { title: 'Practicality', text: 'Finding clear, workable solutions grounded in real-world experience.' },
+  { title: 'Quality', text: 'Maintaining high standards in both thinking and execution.' },
 ];
 
 export default function AboutPage() {
@@ -94,7 +92,7 @@ export default function AboutPage() {
 
       <section className="about-section about-section-stone">
         <div className="about-container">
-          <h2>What we believe in</h2>
+          <h2>Our values</h2>
           <span className="treun-line treun-line--short"></span>
           <div className="values-grid">
             {values.map((v) => (
