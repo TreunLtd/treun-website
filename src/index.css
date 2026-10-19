@@ -1,13 +1,164 @@
-body {
+/* ===================================================
+   TREUN — global brand styles
+   Brand style guide, October 2026
+   =================================================== */
+
+:root {
+  /* Brand colours */
+  --structural-blue: #2E404E;
+  --warm-stone: #EBE8E0;
+
+  /* Supporting tints (derived, for UI only) */
+  --blue-deep: #24333F;          /* hover / pressed on blue */
+  --blue-70: rgba(46, 64, 78, 0.7);
+  --stone-light: #F5F3EE;        /* light section background */
+  --text: #2E404E;
+  --text-muted: #5B6873;
+  --line-light: rgba(46, 64, 78, 0.15);
+  --white: #FFFFFF;
+
+  /* Type */
+  --font: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --gutter: 24px;
+}
+
+* {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--white);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  h1, h2, h3, h4, h5, h6 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font);
+  color: var(--structural-blue);
+  line-height: 1.15;
+}
+
+/* Headlines: bold, uppercase, direct */
+h1, h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/* Subheadings: Semibold */
+h3, h4 {
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* ---------------------------------------------------
+   The Treun Line — horizontal graphic device.
+   Structural, horizontal, aligned, purposeful.
+   --------------------------------------------------- */
+.treun-line {
+  display: block;
+  height: 6px;
+  width: 100%;
+  background-color: currentColor;
+  border: 0;
+}
+
+.treun-line--short {
+  width: 80px;
+}
+
+/* ---------------------------------------------------
+   Buttons
+   --------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Warm Stone on dark backgrounds */
+.btn-stone {
+  background-color: var(--warm-stone);
+  color: var(--structural-blue);
+  border-color: var(--warm-stone);
+}
+
+.btn-stone:hover {
+  background-color: transparent;
+  color: var(--warm-stone);
+}
+
+/* Structural Blue on light backgrounds */
+.btn-blue {
+  background-color: var(--structural-blue);
+  color: var(--warm-stone);
+  border-color: var(--structural-blue);
+}
+
+.btn-blue:hover {
+  background-color: var(--blue-deep);
+  border-color: var(--blue-deep);
+}
+
+/* Outline on light backgrounds */
+.btn-outline {
+  background-color: transparent;
+  color: var(--structural-blue);
+  border-color: var(--structural-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--structural-blue);
+  color: var(--warm-stone);
+}
+
+.btn-arrow {
+  font-weight: 700;
+}
+
+/* Accessible focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--warm-stone);
+  outline-offset: 3px;
 }

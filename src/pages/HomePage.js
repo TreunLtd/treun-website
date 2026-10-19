@@ -18,7 +18,8 @@ export default function HomePage() {
  
       <section className="entity-statement">
         <div className="section-container">
-          <p>Treun is an Auckland-based project management and construction company delivering residential, commercial, and civil projects across Greater Auckland and Northland.</p>
+          <p>Treun delivers project management and construction across residential, commercial, civil and infrastructure projects.</p>
+          <p>Based near Warkworth, we bring clear thinking, practical experience and reliable delivery to projects across Auckland and Northland.</p>
         </div>
       </section>
  
@@ -26,9 +27,9 @@ export default function HomePage() {
         <div className="section-container">
           <div className="two-col-grid">
             <div className="column">
-              <h2>Treun Project Management</h2>
+              <h2>Project Management</h2>
               <p className="col-sub">A trusted pair of hands from start to finish.</p>
-              <p>Engage us early in a project and we can help to carry out feasibility studies and undertake your options anaylsis. Our role is to establish the viability of your project and recommend next steps, before you invest time, money and energy into architects and designers. From there, we oversee the entire project from start to finish. Or just the parts you need our help with.</p>
+              <p>Engage us early in a project and we can help to carry out feasibility studies and undertake your options analysis. Our role is to establish the viability of your project and recommend next steps, before you invest time, money and energy into architects and designers. From there, we oversee the entire project from start to finish. Or just the parts you need our help with.</p>
               <ul className="service-list">
                 <li>Project management</li>
                 <li>Design coordination</li>
@@ -36,10 +37,10 @@ export default function HomePage() {
                 <li>Bulk and location modelling</li>
                 <li>Partner with Tier 1 contractors and developers</li>
               </ul>
-              <a href="/services" className="read-more">Learn More →</a>
+              <a href="/project-management" className="read-more">Learn More →</a>
             </div>
             <div className="column">
-              <h2>Treun Works</h2>
+              <h2>Construction</h2>
               <p className="col-sub">Quality construction for projects big and small.</p>
               <p>From residential subdivisions and builds to complex civil infrastructure, we're laser focused on delivering quality builds. Having developed many of our own projects, we understand the owner's perspective and can translate the construction speak, giving you clarity and confidence along the way.</p>
               <ul className="service-list">
@@ -49,7 +50,7 @@ export default function HomePage() {
                 <li>Innovative construction methods</li>
                 <li>Partner with Tier 1 contractors and developers</li>
               </ul>
-              <a href="/services#construction" className="read-more">Learn More →</a>
+              <a href="/construction" className="read-more">Learn More →</a>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
  
 /* HERO */
 .about-hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background: linear-gradient(135deg, var(--structural-blue) 0%, #333333 100%);
   color: #ffffff;
   padding: 80px 20px;
   text-align: center;
@@ -34,7 +34,7 @@
 }
  
 .about-section-dark {
-  background-color: #1a1a1a;
+  background-color: var(--structural-blue);
   color: #ffffff;
 }
  
@@ -113,11 +113,11 @@
   margin-bottom: 15px;
 }
  
-h2 {
+.about-page h2 {
   font-size: 32px;
-  font-weight: normal;
+  font-weight: 800;
   margin-bottom: 10px;
-  color: #1a1a1a;
+  color: var(--structural-blue);
 }
  
 .about-section-dark h2 {
@@ -154,7 +154,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  color: #1a1a1a;
+  color: var(--structural-blue);
   font-weight: bold;
 }
  

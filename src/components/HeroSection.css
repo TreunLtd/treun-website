@@ -1,105 +1,67 @@
 .hero {
   background-size: cover;
   background-position: center;
-  color: #ffffff;
-  padding: 80px 20px;
-  text-align: center;
-  min-height: 500px;
+  color: var(--warm-stone);
+  min-height: 560px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 96px var(--gutter);
 }
- 
-.hero-content {
-  max-width: 800px;
+
+.hero-inner {
+  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
- 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-  line-height: 1.2;
-  font-weight: normal;
+
+/* Lines, headline and buttons share one width so everything aligns */
+.hero-block {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 100%;
 }
- 
-.hero-tagline {
-  font-size: 22px;
-  font-style: italic;
-  color: #ffffff;
-  margin-bottom: 10px;
+
+.hero-block .treun-line {
+  color: var(--warm-stone);
 }
- 
-.hero-sub {
-  font-size: 16px;
-  color: #cccccc;
-  margin-bottom: 35px;
-}
- 
-.hero-callout {
-  font-size: 14px;
-  color: #aaaaaa;
+
+.hero h1 {
+  color: var(--warm-stone);
+  font-size: clamp(48px, 8vw, 104px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin: 28px 0;
 }
- 
+
 .hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
 }
- 
-.btn {
-  padding: 15px 30px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 2px solid #ffffff;
-  transition: all 0.3s ease;
-  display: inline-block;
-  cursor: pointer;
+
+.hero-buttons .btn {
+  width: 100%;
 }
- 
-.btn-primary {
-  background-color: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
-}
- 
-.btn-primary:hover {
-  background-color: #ffffff;
-  color: #1a1a1a;
-}
- 
-.btn-secondary {
-  background-color: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
-}
- 
-.btn-secondary:hover {
-  background-color: #ffffff;
-  color: #1a1a1a;
-}
- 
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 32px;
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 480px;
+    padding: 72px var(--gutter);
   }
- 
-  .hero-tagline {
-    font-size: 18px;
-  }
- 
-  .hero-buttons {
-    flex-direction: column;
-  }
- 
-  .btn {
+
+  .hero-block {
+    display: flex;
     width: 100%;
   }
+
+  .hero h1 {
+    margin: 22px 0;
+  }
+
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
 }
- 

@@ -3,7 +3,7 @@
 }
 
 .faq-hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background: linear-gradient(135deg, var(--structural-blue) 0%, #333333 100%);
   color: #ffffff;
   padding: 80px 20px;
   text-align: center;
@@ -42,10 +42,10 @@
 .faq-section h2 {
   font-size: 24px;
   font-weight: normal;
-  color: #1a1a1a;
+  color: var(--structural-blue);
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 2px solid var(--structural-blue);
 }
 
 .faq-item {
@@ -65,7 +65,7 @@
   padding: 20px 10px;
   font-size: 15px;
   font-weight: bold;
-  color: #1a1a1a;
+  color: var(--structural-blue);
   gap: 20px;
 }
 
@@ -98,7 +98,7 @@
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 10px;
-  color: #1a1a1a;
+  color: var(--structural-blue);
 }
 
 .faq-cta p {
@@ -110,7 +110,7 @@
 .faq-button {
   display: inline-block;
   padding: 15px 40px;
-  background-color: #1a1a1a;
+  background-color: var(--structural-blue);
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;

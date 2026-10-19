@@ -1,37 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Global type and colour live in index.css. */
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-.App {
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-main {
+.app > div:not(.navigation) {
   flex: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-main h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-main p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666;
 }

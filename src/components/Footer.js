@@ -2,39 +2,69 @@ import React from 'react';
 import './Footer.css';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h4>Treun</h4>
-          <p>Project management and construction. Delivering residential, commercial, and civil projects across Auckland and Northland.</p>
+      <div className="footer-inner">
+        <div className="footer-brand">
+          <a href="/" aria-label="Treun home">
+            <img
+              src="/brand/treun-lockup-stone.svg"
+              alt="Treun — Project Management + Construction"
+              width="280"
+              height="96"
+            />
+          </a>
+          <p className="footer-tagline">Built on strength.</p>
         </div>
 
-        <div className="footer-section">
-          <h4>Services</h4>
-          <p><a href="/services">Project Management</a></p>
-          <p><a href="/services#construction">Construction & Civil Works</a></p>
-          <p><a href="/all-projects">Projects</a></p>
-          <p><a href="/faq">FAQs</a></p>
-        </div>
+        <div className="footer-columns">
+          <div className="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/project-management">Project Management</a></li>
+              <li><a href="/construction">Construction</a></li>
+              <li><a href="/all-projects">Projects</a></li>
+              <li><a href="/faq">FAQs</a></li>
+            </ul>
+          </div>
 
-        <div className="footer-section">
-          <h4>Contact</h4>
-          <p>Algies Bay, Warkworth<br />Auckland, New Zealand</p>
-          <p>Mon–Fri: 7:00am – 5:00pm</p>
-          <p>Phone: <a href="tel:+64276464624">+64 27 6464 624</a></p>
-          <p>Email: <a href="mailto:matt@treun.co.nz?subject=Treun Project Enquiry">matt@treun.co.nz</a></p>
-          <p><a href="/matt-chernishov.vcf" download>Save contact</a></p>
-        </div>
+          <div className="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li>Algies Bay, Warkworth<br />Auckland, New Zealand</li>
+              <li>Mon–Fri: 7:00am – 5:00pm</li>
+              <li><a href="tel:+64276464624">027 6464 624</a></li>
+              <li><a href="mailto:matt@treun.co.nz?subject=Treun%20Project%20Enquiry">matt@treun.co.nz</a></li>
+              <li><a href="/matt-chernishov.vcf" download>Save contact</a></li>
+            </ul>
+          </div>
 
-        <div className="footer-section">
-          <h4>Connect</h4>
-          <p><a href="https://linkedin.com/company/treun-project-management" target="_blank" rel="noreferrer">LinkedIn — Treun</a></p>
+          <div className="footer-section">
+            <h4>Connect</h4>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/company/treun-project-management" target="_blank" rel="noreferrer">
+                  LinkedIn — Treun Project Management
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/treun-works" target="_blank" rel="noreferrer">
+                  LinkedIn — Treun Works
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2025 Treun Limited. All rights reserved. &nbsp;|&nbsp; <em>Treun (t̪ʰɾʲeːn) — Scottish Gaelic for strong | brave | solid.</em></p>
+        <span className="treun-line"></span>
+        <p>
+          &copy; {year} Treun Limited. All rights reserved.
+          <span className="footer-gaelic"> Treun (t̪ʰɾʲeːn) — Scottish Gaelic for strong, brave, solid.</span>
+        </p>
       </div>
     </footer>
   );
