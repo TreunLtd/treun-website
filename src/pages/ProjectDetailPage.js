@@ -1,66 +1,106 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 import projects from '../data/projects';
 import './ProjectDetailPage.css';
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
-  const navigate = useNavigate();
-  const project = projects.find(p => p.id === id);
-  const [currentImage, setCurrentImage] = useState(0);
+  const index = projects.findIndex((p) => p.id === id);
+  const project = projects[index];
+  // Open the gallery on the card photo if one is set
+  const [currentImage, setCurrentImage] = useState(() =>
+    Math.max(0, project?.cover ? project.images.indexOf(project.cover) : 0)
+  );
   const [showVideo, setShowVideo] = useState(project?.video ? true : false);
+
+  const imageCount = project?.images?.length || 0;
+
+  const prevImage = useCallback(() => {
+    setShowVideo(false);
+    setCurrentImage((prev) => (prev === 0 ? imageCount - 1 : prev - 1));
+  }, [imageCount]);
+
+  const nextImage = useCallback(() => {
+    setShowVideo(false);
+    setCurrentImage((prev) => (prev === imageCount - 1 ? 0 : prev + 1));
+  }, [imageCount]);
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.name} | Treun`;
+      document.title = `${project.name} | Treun Projects`;
     }
   }, [project]);
+
+  // Left / right arrow keys move through the photos
+  useEffect(() => {
+    if (!imageCount) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [imageCount, prevImage, nextImage]);
 
   if (!project) {
     return (
       <div className="project-detail-page">
+        <PageHero eyebrow="Treun — Projects" title="Project not found" />
         <div className="project-not-found">
-          <h1>Project not found</h1>
-          <button onClick={() => navigate(-1)}>← Go Back</button>
+          <a href="/all-projects" className="btn btn-blue">
+            <span aria-hidden="true">&lt;</span> All projects
+          </a>
         </div>
       </div>
     );
   }
 
-  const hasImages = project.images && project.images.length > 0;
+  const hasImages = imageCount > 0;
   const hasVideo = !!project.video;
-  const altText = (index) => `${project.name} - ${project.type} - ${project.location} - image ${index + 1} - Treun`;
+  const imagePath = (file) => `/images/projects/${project.folder}/${file}`;
+  const altText = (i) => `${project.name} - ${project.type} - ${project.location} - image ${i + 1} - Treun`;
+  const cover = project.cover || (hasImages ? project.images[0] : null);
 
-  const prevImage = () => {
-    setShowVideo(false);
-    setCurrentImage(prev => (prev === 0 ? project.images.length - 1 : prev - 1));
-  };
+  const prevProject = projects[(index - 1 + projects.length) % projects.length];
+  const nextProject = projects[(index + 1) % projects.length];
 
-  const nextImage = () => {
-    setShowVideo(false);
-    setCurrentImage(prev => (prev === project.images.length - 1 ? 0 : prev + 1));
-  };
+  const meta = [
+    { label: 'Project value', value: project.value },
+    { label: 'Project type', value: project.type },
+    { label: 'Client', value: project.client },
+    { label: 'Timeline', value: project.timeline },
+  ].filter((m) => m.value);
+
+  const sections = [
+    { title: 'Challenge', text: project.challenge },
+    { title: 'Approach', text: project.approach },
+    { title: 'Outcome', text: project.outcome },
+  ].filter((s) => s.text);
 
   return (
     <div className="project-detail-page">
-      <section className="project-detail-hero">
-        <div className="project-detail-hero-content">
-          <h1>{project.name}</h1>
-          <p>{project.location}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={project.type}
+        title={project.name}
+        intro={project.location}
+        image={cover ? imagePath(cover) : undefined}
+      />
 
       <section className="project-detail-content">
-        <div className="section-container">
-          <div className="detail-grid">
+        <div className="project-detail-container">
+          <a href="/all-projects" className="project-back">
+            <span aria-hidden="true">&lt;</span> All projects
+          </a>
 
+          <div className="detail-grid">
             <div className="project-gallery">
               {hasVideo || hasImages ? (
                 <>
                   <div className="slideshow-main">
                     {showVideo ? (
                       <video
-                        src={`/images/projects/${project.folder}/${project.video}`}
+                        src={imagePath(project.video)}
                         controls
                         autoPlay
                         loop
@@ -70,44 +110,53 @@ export default function ProjectDetailPage() {
                       />
                     ) : (
                       <>
-                        <button className="slide-arrow slide-prev" onClick={prevImage}>&#8249;</button>
                         <img
-                          src={`/images/projects/${project.folder}/${project.images[currentImage]}`}
+                          src={imagePath(project.images[currentImage])}
                           alt={altText(currentImage)}
                           className="slideshow-image"
                         />
-                        <button className="slide-arrow slide-next" onClick={nextImage}>&#8250;</button>
-                        <div className="slide-counter">{currentImage + 1} / {project.images.length}</div>
+                        {imageCount > 1 && (
+                          <>
+                            <button className="slide-arrow slide-prev" onClick={prevImage} aria-label="Previous photo">
+                              &lt;
+                            </button>
+                            <button className="slide-arrow slide-next" onClick={nextImage} aria-label="Next photo">
+                              &gt;
+                            </button>
+                          </>
+                        )}
+                        <div className="slide-counter">
+                          {currentImage + 1} / {imageCount}
+                        </div>
                       </>
                     )}
                   </div>
 
                   <div className="slideshow-thumbs">
                     {hasVideo && (
-                      <div
+                      <button
                         className={`thumb-item ${showVideo ? 'active' : ''}`}
                         onClick={() => setShowVideo(true)}
+                        aria-label="Play video"
                       >
-                        <video
-                          src={`/images/projects/${project.folder}/${project.video}`}
-                          muted
-                          className="thumb-video"
-                        />
-                        <div className="thumb-play">▶</div>
-                      </div>
+                        <video src={imagePath(project.video)} muted className="thumb-video" />
+                        <span className="thumb-play" aria-hidden="true">▶</span>
+                      </button>
                     )}
-                    {hasImages && project.images.map((image, index) => (
-                      <div
-                        key={index}
-                        className={`thumb-item ${!showVideo && index === currentImage ? 'active' : ''}`}
-                        onClick={() => { setShowVideo(false); setCurrentImage(index); }}
-                      >
-                        <img
-                          src={`/images/projects/${project.folder}/${image}`}
-                          alt={altText(index)}
-                        />
-                      </div>
-                    ))}
+                    {hasImages &&
+                      project.images.map((image, i) => (
+                        <button
+                          key={image}
+                          className={`thumb-item ${!showVideo && i === currentImage ? 'active' : ''}`}
+                          onClick={() => {
+                            setShowVideo(false);
+                            setCurrentImage(i);
+                          }}
+                          aria-label={`Show photo ${i + 1}`}
+                        >
+                          <img src={imagePath(image)} alt="" loading="lazy" />
+                        </button>
+                      ))}
                   </div>
                 </>
               ) : (
@@ -116,48 +165,50 @@ export default function ProjectDetailPage() {
             </div>
 
             <div className="project-details">
-              <div className="project-meta">
-                <div className="meta-item">
-                  <h4>Project Value</h4>
-                  <p>{project.value}</p>
-                </div>
-                <div className="meta-item">
-                  <h4>Project Type</h4>
-                  <p>{project.type}</p>
-                </div>
-                <div className="meta-item">
-                  <h4>Client</h4>
-                  <p>{project.client}</p>
-                </div>
-                <div className="meta-item">
-                  <h4>Timeline</h4>
-                  <p>{project.timeline}</p>
-                </div>
-              </div>
+              <dl className="project-meta">
+                {meta.map((m) => (
+                  <div className="meta-item" key={m.label}>
+                    <dt>{m.label}</dt>
+                    <dd>{m.value}</dd>
+                  </div>
+                ))}
+              </dl>
 
-              <div className="project-section">
-                <h2>Challenge</h2>
-                <p>{project.challenge}</p>
-              </div>
-
-              <div className="project-section">
-                <h2>Approach</h2>
-                <p>{project.approach}</p>
-              </div>
-
-              <div className="project-section">
-                <h2>Outcome</h2>
-                <p>{project.outcome}</p>
-              </div>
-
-              <div className="project-nav">
-                <button className="back-button" onClick={() => navigate(-1)}>
-                  ← Back to Projects
-                </button>
-              </div>
+              {sections.map((s) => (
+                <div className="project-section" key={s.title}>
+                  <h2>{s.title}</h2>
+                  <p>{s.text}</p>
+                </div>
+              ))}
             </div>
-
           </div>
+
+          <nav className="project-pager" aria-label="More projects">
+            <a href={`/project/${prevProject.id}`} className="pager-link pager-prev">
+              <span className="pager-label">
+                <span aria-hidden="true">&lt;</span> Previous project
+              </span>
+              <span className="pager-name">{prevProject.name}</span>
+            </a>
+            <a href={`/project/${nextProject.id}`} className="pager-link pager-next">
+              <span className="pager-label">
+                Next project <span aria-hidden="true">&gt;</span>
+              </span>
+              <span className="pager-name">{nextProject.name}</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section className="project-cta">
+        <div className="project-detail-container project-cta-inner">
+          <div>
+            <h2>Have a project like this?</h2>
+            <p>Let's talk about how we can help.</p>
+          </div>
+          <a href="/contact" className="btn btn-stone">
+            Get in touch <span className="btn-arrow" aria-hidden="true">&gt;</span>
+          </a>
         </div>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceDetail from '../components/ServiceDetail';
+import { isConstructionProject } from '../data/serviceFilters';
 
 const services = [
   {
@@ -20,10 +21,6 @@ const services = [
   },
 ];
 
-// Projects where Treun delivered the build or civil works
-const isConstructionProject = (p) =>
-  /build|construction|earthworks|retaining|fitout|modular/i.test(p.type);
-
 export default function ConstructionPage() {
   return (
     <ServiceDetail
@@ -35,6 +32,7 @@ export default function ConstructionPage() {
       heroImage="/images/projects/POIN/POIN_01.jpg"
       services={services}
       projectFilter={isConstructionProject}
+      projectsHref="/all-projects?filter=construction"
       otherService={{ href: '/project-management', label: 'Project Management' }}
     />
   );

@@ -17,6 +17,7 @@ export default function ServiceDetail({
   services,
   projectFilter,
   otherService,
+  projectsHref = '/all-projects',
 }) {
   useEffect(() => {
     document.title = pageTitle;
@@ -75,7 +76,7 @@ export default function ServiceDetail({
                 <CaseStudyCard key={project.id} project={project} />
               ))}
             </div>
-            <a href="/all-projects" className="btn btn-outline service-all-projects">
+            <a href={projectsHref} className="btn btn-outline service-all-projects">
               See all projects <span className="btn-arrow" aria-hidden="true">&gt;</span>
             </a>
           </div>

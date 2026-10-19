@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceDetail from '../components/ServiceDetail';
+import { isPmProject } from '../data/serviceFilters';
 
 const services = [
   {
@@ -24,9 +25,6 @@ const services = [
   },
 ];
 
-// Projects where planning, subdivision and management led the work
-const isPmProject = (p) => /subdivision|ccc|conversion/i.test(p.type);
-
 export default function ProjectManagementPage() {
   return (
     <ServiceDetail
@@ -38,6 +36,7 @@ export default function ProjectManagementPage() {
       heroImage="/images/projects/WEST/WEST_05.jpg"
       services={services}
       projectFilter={isPmProject}
+      projectsHref="/all-projects?filter=project-management"
       otherService={{ href: '/construction', label: 'Construction' }}
     />
   );
