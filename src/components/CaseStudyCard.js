@@ -3,14 +3,17 @@ import './CaseStudyCard.css';
 
 export default function CaseStudyCard({ project }) {
   const altText = `${project.name} - ${project.type} - ${project.location} - Treun`;
+  // Optional `cover` in projects.js picks the card photo; otherwise the first image is used
+  const cover = project.cover || (project.images && project.images[0]);
 
   return (
-    <div className="case-study-card">
+    <a href={`/project/${project.id}`} className="case-study-card">
       <div className="card-image">
-        {project.images && project.images.length > 0 ? (
-          <img 
-            src={`/images/projects/${project.folder}/${project.images[0]}`}
+        {cover ? (
+          <img
+            src={`/images/projects/${project.folder}/${cover}`}
             alt={altText}
+            loading="lazy"
           />
         ) : (
           <div className="placeholder-image"></div>
@@ -18,13 +21,14 @@ export default function CaseStudyCard({ project }) {
       </div>
 
       <div className="card-content">
-        <h3 className="project-title">{project.name}</h3>
-        <p className="project-type">{project.type}</p>
-        <p className="project-location">{project.location}</p>
-        <p className="project-value">{project.value}</p>
-        <p className="project-description">{project.description}</p>
-        <a href={`/project/${project.id}`} className="view-project">View Project →</a>
+        <p className="card-type">{project.type}</p>
+        <h3 className="card-title">{project.name}</h3>
+        <p className="card-location">{project.location}</p>
+        {project.value && <p className="card-value">{project.value}</p>}
+        <span className="card-link">
+          View project <span aria-hidden="true">&gt;</span>
+        </span>
       </div>
-    </div>
+    </a>
   );
 }
