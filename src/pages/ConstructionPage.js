@@ -1,25 +1,8 @@
 import React from 'react';
 import ServiceDetail from '../components/ServiceDetail';
+import { constructionServices as services } from '../data/services';
 import { isConstructionProject } from '../data/serviceFilters';
 
-const services = [
-  {
-    title: 'Residential Construction',
-    text: "This is our bread and butter. With extra butter. From small house builds and residential subdivisions to medium-density developments, we can jump in at whatever capacity you need. Whether that's full delivery or a bit of support for an owner-builder, we've got your back.",
-  },
-  {
-    title: 'Civil Works & Infrastructure',
-    text: "We obsess over the things no one sees. Earthworks. Drainage and stormwater. Making sure there's a strong, stable starting point for building on. Bringing solutions for complex terrain. Whatever it is, we'll make sure your site is prepared for the project you've got in mind.",
-  },
-  {
-    title: 'Subdivision Development',
-    text: "From smaller residential sites, to large, complex subdivisions, to coordinating the release of new sections, if there's land to be developed, we can help. And because the consent process isn't high on anyone's favourite-things-to-do list, we'll take care of that too.",
-  },
-  {
-    title: 'Innovative Construction Methods',
-    text: 'Our team are clued up on the latest construction methods, resulting in a faster and more cost effective construction process. From prefabricated and modular building systems to specialised delivery methods to the use of pre-made insulated panels, our finger is on the pulse.',
-  },
-];
 
 export default function ConstructionPage() {
   return (
