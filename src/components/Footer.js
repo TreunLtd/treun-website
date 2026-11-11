@@ -8,14 +8,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <a href="/" aria-label="Treun home">
-            <img
-              src="/brand/treun-lockup-stone.svg"
-              alt="Treun – Project Management + Construction"
-              width="280"
-              height="96"
-            />
-          </a>
           <p className="footer-tagline">Built on strength.</p>
         </div>
 
