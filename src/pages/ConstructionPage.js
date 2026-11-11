@@ -8,9 +8,7 @@ export default function ConstructionPage() {
   return (
     <ServiceDetail
       pageTitle="Construction & Civil Works | Treun | Auckland & Northland"
-      eyebrow="Treun – Construction"
       title="Construction"
-      tagline="Quality construction for projects big and small."
       intro="From residential subdivisions and builds to complex civil infrastructure, we're laser focused on delivering quality builds. Having developed many of our own projects, we understand the owner's perspective and can translate the construction speak, giving you clarity and confidence along the way."
       heroImage="/images/projects/POIN/POIN_01.jpg"
       services={services}
