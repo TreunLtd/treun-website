@@ -56,13 +56,13 @@
 }
 
 .footer-section a {
-  color: rgba(235, 232, 224, 0.8);
+  color: #64B5F6;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-section a:hover {
-  color: var(--warm-stone);
+  color: #87CEEB;
   text-decoration: underline;
 }
 
