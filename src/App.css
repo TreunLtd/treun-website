@@ -1,0 +1,11 @@
+/* Global type and colour live in index.css. */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app > div:not(.navigation) {
+  flex: 1;
+}

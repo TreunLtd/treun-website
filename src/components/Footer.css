@@ -1,0 +1,106 @@
+.footer {
+  background-color: var(--structural-blue);
+  color: var(--warm-stone);
+  padding: 72px var(--gutter) 32px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+}
+
+/* Lockup – above the 275px minimum */
+.footer-brand img {
+  width: 280px;
+  height: auto;
+}
+
+.footer-tagline {
+  margin-top: 24px;
+  color: var(--warm-stone);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-section h4 {
+  color: var(--warm-stone);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--warm-stone);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: rgba(235, 232, 224, 0.8);
+}
+
+.footer-section a {
+  color: rgba(235, 232, 224, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: var(--warm-stone);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 56px auto 0;
+  color: var(--warm-stone);
+}
+
+.footer-bottom .treun-line {
+  height: 2px;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  font-family: var(--font);
+  color: rgba(235, 232, 224, 0.6);
+}
+
+.footer-gaelic {
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-gaelic {
+    display: block;
+    margin-top: 6px;
+  }
+}
