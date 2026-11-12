@@ -178,8 +178,10 @@
 }
 
 .value-item {
-  border-top: 3px solid var(--structural-blue);
-  padding-top: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
 }
 
 .value-item h3 {
@@ -188,9 +190,12 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 10px;
+  color: var(--structural-blue);
 }
 
 .value-item p {
+  font-size: 15px;
+  line-height: 1.75;
   margin-bottom: 0;
 }
 

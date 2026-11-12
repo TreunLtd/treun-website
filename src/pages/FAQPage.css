@@ -3,7 +3,7 @@
 }
 
 .faq-container {
-  max-width: 920px;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
