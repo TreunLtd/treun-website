@@ -87,8 +87,9 @@
 }
 
 .service-card {
-  border-top: 3px solid var(--structural-blue);
-  padding-top: 24px;
+  background-color: var(--stone-light);
+  border-radius: 8px;
+  padding: 32px 24px;
 }
 
 .service-card h3 {

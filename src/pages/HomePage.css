@@ -110,7 +110,7 @@
 
 .featured-projects .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 48px;
 }
@@ -123,13 +123,24 @@
 
 .credentials-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
 .credential {
-  border-top: 3px solid var(--structural-blue);
-  padding-top: 20px;
+  background-color: var(--stone-light);
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--structural-blue);
+}
+
+.credential-logo {
+  height: 60px;
+  width: auto;
+  margin: 0 auto 12px;
+  display: block;
+  object-fit: contain;
 }
 
 .credential h3 {

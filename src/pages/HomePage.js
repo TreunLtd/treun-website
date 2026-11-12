@@ -34,10 +34,9 @@ const capabilities = [
 ];
 
 const credentials = [
-  { title: 'H&S Systems', text: 'HazardCo accredited' },
-  { title: 'Insurance', text: 'PI/PL coverage' },
-  { title: 'Certifications', text: 'NZ Certified Builders' },
-  { title: 'Registered', text: 'Downer Felix Vendor Marketplace' },
+  { title: 'Insurance', text: 'PI/PL coverage', image: '/images/credentials/vero.png' },
+  { title: 'Licensed Building Practitioners', text: ' ', image: '/images/credentials/LBP-Logo-Transparent.png' },
+  { title: 'NZ Certified Builders', text: ' ', image: '/images/credentials/NZCB-Logo.png.webp' },
 ];
 
 export default function HomePage() {
@@ -106,6 +105,7 @@ export default function HomePage() {
           <div className="credentials-grid">
             {credentials.map((c) => (
               <div className="credential" key={c.title}>
+                <img src={c.image} alt={c.title} className="credential-logo" />
                 <h3>{c.title}</h3>
                 <p>{c.text}</p>
               </div>
