@@ -31,26 +31,44 @@
   color: var(--structural-blue);
 }
 
-/* Brand section */
-.about-brand {
+/* Brand and story sections */
+.about-section-stone {
+  background-color: var(--stone-light);
+}
+
+.about-brand-story {
   max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.about-brand {
+  padding: 40px 40px 40px 0;
+  background-color: var(--white);
+  border-radius: 8px;
 }
 
 .about-brand .treun-line {
   margin-bottom: 28px;
 }
 
-/* Story box */
-.about-section-stone {
-  background-color: var(--stone-light);
+.about-brand h2 {
+  margin-bottom: 20px;
+}
+
+.about-brand p {
+  margin-bottom: 16px;
+}
+
+.about-brand p:last-child {
+  margin-bottom: 0;
 }
 
 .about-story-box {
+  padding: 40px 40px 40px 0;
   background-color: var(--white);
   border-radius: 8px;
-  padding: 40px;
-  max-width: 860px;
-  margin: 0 auto;
 }
 
 .about-story-box .treun-line {
@@ -62,8 +80,6 @@
 }
 
 .about-story-box p {
-  font-size: 15px;
-  line-height: 1.8;
   margin-bottom: 16px;
 }
 

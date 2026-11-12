@@ -32,21 +32,24 @@ export default function AboutPage() {
       />
 
       <section className="about-section">
-        <div className="about-container about-two-col">
-          <div className="about-col">
-            <span className="treun-line"></span>
-            <h2>The story</h2>
-            <p>Treun is a Scottish Gaelic word meaning strong. It was chosen deliberately – not as a boast, but as a commitment. Quality relationships, reliability and dependability.</p>
-            <p>The name comes from Old Irish <em>trén</em>, rooted in Proto-Celtic and Proto-Indo-European origins meaning to be strong, brave or sturdy – built from stone. It is a word that has endured for thousands of years. That kind of reliability is what we aim to bring to every project we work on.</p>
-            <p>Treun was founded by Matt Chernishov with a simple belief: that successful projects should be designed and built for future generations to also enjoy.</p>
-          </div>
-          <div className="about-col">
-            <span className="treun-line"></span>
-            <h2>One brand. Two capabilities.</h2>
-            <p>Treun delivers across two disciplines – project management and construction – under one brand. Depending on your project, we engage as advisors, builders, or both.</p>
-            <p><a href="/project-management"><strong>Project management</strong></a> covers feasibility, options analysis, design coordination, procurement and contract administration. We engage early – before architects and designers are involved – to establish what is actually viable before you commit significant spend.</p>
-            <p><a href="/construction"><strong>Construction</strong></a> covers physical delivery – residential builds, civil works, subdivisions and infrastructure. From simple house builds through to complex multi-lot developments.</p>
-            <p>The same values and the same standard of work apply across both.</p>
+        <div className="about-container">
+          <div className="about-brand-story">
+            <div className="about-brand">
+              <span className="treun-line"></span>
+              <h2>One brand. Two capabilities.</h2>
+              <p>Treun delivers across two disciplines – project management and construction – under one brand. Depending on your project, we engage as advisors, builders, or both.</p>
+              <p><a href="/project-management"><strong>Project management</strong></a> covers feasibility, options analysis, design coordination, procurement and contract administration. We engage early – before architects and designers are involved – to establish what is actually viable before you commit significant spend.</p>
+              <p><a href="/construction"><strong>Construction</strong></a> covers physical delivery – residential builds, civil works, subdivisions and infrastructure. From simple house builds through to complex multi-lot developments.</p>
+              <p>The same values and the same standard of work apply across both.</p>
+            </div>
+
+            <div className="about-story-box">
+              <span className="treun-line"></span>
+              <h2>The story</h2>
+              <p>Treun is a Scottish Gaelic word meaning strong. It was chosen deliberately – not as a boast, but as a commitment. Quality relationships, reliability and dependability.</p>
+              <p>The name comes from Old Irish <em>trén</em>, rooted in Proto-Celtic and Proto-Indo-European origins meaning to be strong, brave or sturdy – built from stone. It is a word that has endured for thousands of years. That kind of reliability is what we aim to bring to every project we work on.</p>
+              <p>Treun was founded by Matt Chernishov with a simple belief: that successful projects should be designed and built for future generations to also enjoy.</p>
+            </div>
           </div>
         </div>
       </section>
