@@ -57,11 +57,11 @@ export default function ServiceDetail({
           <span className="treun-line treun-line--short"></span>
           <div className="service-grid">
             {services.map((service) => (
-  <article className="service-card" key={service.title}>
-    <h3>{service.title}</h3>
-    <p>{service.text}</p>
-  </article>
-))}
+              <article className="service-card" key={service.title}>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -94,9 +94,6 @@ export default function ServiceDetail({
             <div className="service-cta-buttons">
               <a href="/contact" className="btn btn-stone">
                 Get in touch <span className="btn-arrow" aria-hidden="true">&gt;</span>
-              </a>
-              <a href={otherService.href} className="service-cta-link">
-                {otherService.label} &gt;
               </a>
             </div>
           </div>
