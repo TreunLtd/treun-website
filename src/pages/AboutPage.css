@@ -31,15 +31,44 @@
   color: var(--structural-blue);
 }
 
-/* Story / capabilities */
-.about-two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
+/* Brand section */
+.about-brand {
+  max-width: 860px;
 }
 
-.about-col .treun-line {
+.about-brand .treun-line {
   margin-bottom: 28px;
+}
+
+/* Story box */
+.about-section-stone {
+  background-color: var(--stone-light);
+}
+
+.about-story-box {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about-story-box .treun-line {
+  margin-bottom: 28px;
+}
+
+.about-story-box h2 {
+  margin-bottom: 20px;
+}
+
+.about-story-box p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-story-box p:last-child {
+  margin-bottom: 0;
 }
 
 /* Matt */
@@ -122,10 +151,6 @@
 }
 
 /* Values */
-.about-section-stone {
-  background-color: var(--stone-light);
-}
-
 .about-section-stone .treun-line--short {
   margin-bottom: 48px;
 }
@@ -172,11 +197,6 @@
 }
 
 @media (max-width: 900px) {
-  .about-two-col {
-    grid-template-columns: 1fr;
-    gap: 64px;
-  }
-
   .matt-section {
     grid-template-columns: 1fr;
     gap: 36px;
